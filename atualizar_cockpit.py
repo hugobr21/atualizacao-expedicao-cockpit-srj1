@@ -464,7 +464,7 @@ def funcaoPrincipal():
 				etiquetagemESortingHoraHora = consolidarBaseSorteadoEtiquetado(planification=planification,baseDeRoteirizacao=baseDeRoteirizacao)
 				deltatime = time.time() - starttime
 				print(f'{deltatime} segundos')
-				if (deltatime/60) >= 1:
+				if (deltatime/60) >= 9:
 					break
 			
 			monitoramentoTerrestre = baixarMonitoramentoTerrestre()
@@ -480,6 +480,8 @@ def funcaoPrincipal():
 			
 			limpar_celulas(ID_PLANILHA_BASE_COCKPIT_2,'BASE AM!A2:E')
 			update_values(ID_PLANILHA_BASE_COCKPIT_2,'BASE AM!A2','USER_ENTERED',etiquetagemESortingHoraHora.values.tolist())
+
+			update_values(ID_PLANILHA_BASE_COCKPIT_1,'PLANIFICATION VIVO!AF2','USER_ENTERED',[[time.strftime("%d/%m/%Y %H:%M:%S")]])
 
 			pausaAcompanhamento = carregarParametros()["delayacompanhamento"]
 			agora = time.strftime('%H:%M')
