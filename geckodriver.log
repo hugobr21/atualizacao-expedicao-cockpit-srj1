@@ -4755,3 +4755,497 @@ JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planifica
 JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
 JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
 JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670336808193	geckodriver	INFO	Listening on 127.0.0.1:51239
+1670336808655	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51240" "-no-remote" "-profile" "C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofilemsPxSa"
+1670336811499	Marionette	INFO	Marionette enabled
+1670336811521	Marionette	INFO	Listening on port 51243
+WebDriver BiDi listening on ws://127.0.0.1:51240
+1670336812135	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofilemsPxSa\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51240/devtools/browser/d0c27c52-890b-4e44-aac0-b580e1f8ea00
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 103: WebGL context was lost.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670336944720	geckodriver	INFO	Listening on 127.0.0.1:51517
+1670336945128	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51518" "-no-remote" "-profile" "C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileLXKKRv"
+1670336946658	Marionette	INFO	Marionette enabled
+1670336946670	Marionette	INFO	Listening on port 51521
+WebDriver BiDi listening on ws://127.0.0.1:51518
+1670336946992	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileLXKKRv\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51518/devtools/browser/93cd1d26-6d07-48a7-b84d-28aca4100af9
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 103: WebGL context was lost.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 103: WebGL context was lost.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 210 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670337215906	geckodriver	INFO	Listening on 127.0.0.1:51821
+1670337216401	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51822" "-no-remote" "-profile" "C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileM6HEeT"
+1670337218721	Marionette	INFO	Marionette enabled
+1670337218731	Marionette	INFO	Listening on port 51825
+WebDriver BiDi listening on ws://127.0.0.1:51822
+1670337219767	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileM6HEeT\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 766))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:51822/devtools/browser/55b85a04-5ba2-4a92-a5db-0ed9fea4ac5d
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 103: WebGL context was lost.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 103: WebGL context was lost.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+1670337247391	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670337292585	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670337396340	geckodriver	INFO	Listening on 127.0.0.1:52198
+1670337396873	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52199" "-no-remote" "-profile" "C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileeq5uk5"
+1670337398546	Marionette	INFO	Marionette enabled
+1670337398564	Marionette	INFO	Listening on port 52202
+WebDriver BiDi listening on ws://127.0.0.1:52199
+1670337399041	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileeq5uk5\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52199/devtools/browser/5542bfea-3549-4280-83d1-45139fbc03f7
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 103: WebGL context was lost.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 103: WebGL context was lost.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670337829380	geckodriver	INFO	Listening on 127.0.0.1:52606
+1670337829849	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52607" "-no-remote" "-profile" "C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileHnIi8x"
+1670337832183	Marionette	INFO	Marionette enabled
+1670337832197	Marionette	INFO	Listening on port 52610
+WebDriver BiDi listening on ws://127.0.0.1:52607
+1670337833167	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileHnIi8x\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52607/devtools/browser/aa799368-c5a4-407c-982d-f7cc2b25c2cd
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 103: WebGL context was lost.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 103: WebGL context was lost.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 103: WebGL context was lost.
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670338035496	geckodriver	INFO	Listening on 127.0.0.1:52862
+1670338036025	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52863" "-no-remote" "-profile" "C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileBqOmNG"
+1670338038251	Marionette	INFO	Marionette enabled
+1670338038263	Marionette	INFO	Listening on port 52866
+WebDriver BiDi listening on ws://127.0.0.1:52863
+1670338038884	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileBqOmNG\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new AbortError("The operation was aborted. ", (void 0), 766))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:52863/devtools/browser/9fad05a7-aaf2-4225-882d-bdd1399bddeb
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 103: WebGL context was lost.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 103: WebGL context was lost.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670338377138	geckodriver	INFO	Listening on 127.0.0.1:53196
+1670338377643	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53197" "-no-remote" "-profile" "C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileAmkArR"
+1670338379917	Marionette	INFO	Marionette enabled
+1670338379927	Marionette	INFO	Listening on port 53200
+WebDriver BiDi listening on ws://127.0.0.1:53197
+1670338380794	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileAmkArR\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53197/devtools/browser/625f9dce-d1c3-4b2e-87f8-a8184c07094f
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 103: WebGL context was lost.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 103: WebGL context was lost.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670338571744	geckodriver	INFO	Listening on 127.0.0.1:53442
+1670338572300	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53443" "-no-remote" "-profile" "C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofilexAOYmf"
+1670338574118	Marionette	INFO	Marionette enabled
+1670338574139	Marionette	INFO	Listening on port 53446
+WebDriver BiDi listening on ws://127.0.0.1:53443
+1670338574456	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofilexAOYmf\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53443/devtools/browser/714fda10-f11b-44fb-bd36-002750f9b32c
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 103: WebGL context was lost.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670338712789	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670338748655	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670338767196	geckodriver	INFO	Listening on 127.0.0.1:53646
+1670338767686	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53647" "-no-remote" "-profile" "C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofile431FlY"
+1670338769405	Marionette	INFO	Marionette enabled
+1670338769417	Marionette	INFO	Listening on port 53650
+WebDriver BiDi listening on ws://127.0.0.1:53647
+1670338770728	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofile431FlY\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53647/devtools/browser/025a1c1f-5f68-46a2-8a68-d6ce46413c5b
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 103: WebGL context was lost.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/user-recaptcha, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/user-recaptcha, line 103: WebGL context was lost.
+1670338806163	geckodriver	INFO	Listening on 127.0.0.1:53799
+1670338806672	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "53800" "-no-remote" "-profile" "C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileJLU9a6"
+1670338808250	Marionette	INFO	Marionette enabled
+1670338808271	Marionette	INFO	Listening on port 53803
+WebDriver BiDi listening on ws://127.0.0.1:53800
+1670338809261	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileJLU9a6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:53800/devtools/browser/dfc89fa1-f22f-44b1-b26a-ae78d7205603
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 103: WebGL context was lost.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 103: WebGL context was lost.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670339038108	geckodriver	INFO	Listening on 127.0.0.1:54062
+1670339038523	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54063" "-no-remote" "-profile" "C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileZNcKN6"
+1670339040140	Marionette	INFO	Marionette enabled
+1670339040150	Marionette	INFO	Listening on port 54066
+WebDriver BiDi listening on ws://127.0.0.1:54063
+1670339041069	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileZNcKN6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:54063/devtools/browser/79e3a193-00ae-43b9-a40e-b23d2bdd1fe5
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 103: WebGL context was lost.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 103: WebGL context was lost.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670339148218	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670339176564	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670339237714	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670339260620	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670339280095	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670339302837	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670339340579	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670339362167	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670339383362	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670339408306	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670339445278	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670339472420	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670339499212	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670339577608	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670339606110	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670339630642	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670339700395	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670340090249	geckodriver	INFO	Listening on 127.0.0.1:55437
+1670340090744	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55438" "-no-remote" "-profile" "C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileu4XH8r"
+1670340092547	Marionette	INFO	Marionette enabled
+1670340092558	Marionette	INFO	Listening on port 55441
+WebDriver BiDi listening on ws://127.0.0.1:55438
+1670340093073	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileu4XH8r\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:55438/devtools/browser/d75e975f-1539-4d83-9013-0a9b8cbae774
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 103: WebGL context was lost.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 103: WebGL context was lost.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670340242118	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670340266247	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670340288573	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670340327066	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670340353393	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670340379732	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670340408747	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670340445519	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670340472456	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670340491911	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670340519415	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670340561688	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670353920210	geckodriver	INFO	Listening on 127.0.0.1:56075
+1670353920741	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56076" "-no-remote" "-profile" "C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileWxnAQS"
+1670353923748	Marionette	INFO	Marionette enabled
+1670353923766	Marionette	INFO	Listening on port 56079
+WebDriver BiDi listening on ws://127.0.0.1:56076
+1670353924365	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileWxnAQS\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56076/devtools/browser/da10399b-991d-4feb-a87e-cccb2cb82d49
+1670354287983	geckodriver	INFO	Listening on 127.0.0.1:56375
+1670354288535	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56376" "-no-remote" "-profile" "C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofilerEqJVV"
+1670354290917	Marionette	INFO	Marionette enabled
+1670354290930	Marionette	INFO	Listening on port 56379
+WebDriver BiDi listening on ws://127.0.0.1:56376
+1670354291494	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofilerEqJVV\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56376/devtools/browser/07ce2663-6398-440e-9e8a-37a2a692b4ad
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 103: WebGL context was lost.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 103: WebGL context was lost.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670354374538	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670354450467	geckodriver	INFO	Listening on 127.0.0.1:56922
+1670354450963	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56923" "-no-remote" "-profile" "C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileMUh6sb"
+1670354452681	Marionette	INFO	Marionette enabled
+1670354452695	Marionette	INFO	Listening on port 56926
+WebDriver BiDi listening on ws://127.0.0.1:56923
+1670354453626	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileMUh6sb\\search.json.mozlz4", (void 0)))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 768))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 420))
+DevTools listening on ws://127.0.0.1:56923/devtools/browser/494811ad-f16e-408b-994e-557d02bc878c
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 103: WebGL context was lost.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 103: WebGL context was lost.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670354598267	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670354637276	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes line 507 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670354666144	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
