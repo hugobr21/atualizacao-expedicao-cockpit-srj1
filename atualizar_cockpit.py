@@ -1,6 +1,7 @@
 from google_api_functions import *
 from datetime import datetime 
 import pandas as pd
+import traceback
 import json
 import time
 import os
@@ -118,26 +119,6 @@ planification_roteirizacao):
 	atualizarBase(planilha_base_dash_svc, planification_aba_range, planification_roteirizacao)
 
 	print('Base atualizada!')
-	
-# def carregarBaseEtiquetada():
-# 	data_agora = datetime(datetime.now().year,datetime.now().month,datetime.now().day,00,00,00).strftime("_%d_%m_%Y")
-# 	try:
-# 		base_atstation = pd.read_excel(f'mudanca_de_status_etiquetagem{data_agora}.xlsx')
-# 	except:
-# 		base_atstation = pd.DataFrame({'Shipment':[],'Mudança de Status':[],'Hora':[]})
-# 		base_atstation.to_excel(f'mudanca_de_status_etiquetagem{data_agora}.xlsx', index=False)
-# 	base_atstation['Shipment'] = base_atstation['Shipment'].astype('str')
-# 	return base_atstation
-
-# def carregarBaseSorteado():
-# 	data_agora = datetime(datetime.now().year,datetime.now().month,datetime.now().day,00,00,00).strftime("_%d_%m_%Y")
-# 	try:
-# 		base_sorteado = pd.read_excel(f'mudanca_de_status_sorteado{data_agora}.xlsx')
-# 	except:
-# 		base_sorteado = pd.DataFrame({'Shipment':[],'Mudança de Status':[],'Hora':[]})
-# 		base_sorteado.to_excel(f'mudanca_de_status_sorteado{data_agora}.xlsx', index=False)
-# 	base_sorteado['Shipment'] = base_sorteado['Shipment'].astype('str')
-# 	return base_sorteado
 
 def carregarBaseSorteadoEtiquetado(nome_base):
 	data_agora = datetime(datetime.now().year,datetime.now().month,datetime.now().day,00,00,00).strftime("_%d_%m_%Y")
@@ -392,7 +373,7 @@ def baixarFalhaDeEntrega():
 
 def baixarMonitoramentoTerrestre():
 	driver.get('https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes')
-	nome_do_arquivo = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\' + 'rutas.csv'
+	nome_do_arquivo = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\' + 'rotas.csv'
 	print(nome_do_arquivo)
 	contador = 0
 	# Baixa o arquivo
@@ -420,7 +401,9 @@ def baixarMonitoramentoTerrestre():
 		time.sleep(1)
 		try:
 			os.chdir(f'C:\\Users\\{user_name}\\Downloads')
-			monitoramentoTerrestre = pd.read_csv([nomesDosArquivos for nomesDosArquivos in os.listdir() if ('rutas' in nomesDosArquivos) and ('.part' not in nomesDosArquivos)][0])
+			nome_do_arquivo = [nomesDosArquivos for nomesDosArquivos in os.listdir() if ('rutas' in nomesDosArquivos or 'rotas' in nomesDosArquivos) and ('.part' not in nomesDosArquivos)][0]
+			monitoramentoTerrestre = pd.read_csv(nome_do_arquivo)
+			os.remove(nome_do_arquivo)
 			os.chdir(diretorio_robo)
 			# monitoramentoTerrestre['ID do envio'] = pd.to_numeric(monitoramentoTerrestre['ID do envio'], errors='coerce')
 			# monitoramentoTerrestre = monitoramentoTerrestre.loc[~ (monitoramentoTerrestre['ID do envio'].isna())]
@@ -435,15 +418,15 @@ def baixarMonitoramentoTerrestre():
 			]
 
 			monitoramentoTerrestre = monitoramentoTerrestre.fillna('')
-			os.remove(nome_do_arquivo)
-			print(f'Arquivo falha de entrega carregado - baixarmonitoramentoTerrestre')
+			print(f'Arquivo de rotas carregado - baixarmonitoramentoTerrestre')
 			return monitoramentoTerrestre
 		except Exception as e:
 			print(e)
+			print(traceback.format_exc())
 			contador = contador + 1
 			if contador >=100:
 				try:
-					os.remove(nome_do_arquivo)
+					apagarCSVs()
 				except:
 					pass
 				print('#2 Reiniciando página e download - baixarmonitoramentoTerrestre')
@@ -474,14 +457,14 @@ def funcaoPrincipal():
 	while True:
 		try:
 			starttime = time.time()
-			
+
 			for i in range(100):
 				apagarCSVs()
 				planification = baixar_planification()
 				etiquetagemESortingHoraHora = consolidarBaseSorteadoEtiquetado(planification=planification,baseDeRoteirizacao=baseDeRoteirizacao)
 				deltatime = time.time() - starttime
 				print(f'{deltatime} segundos')
-				if (deltatime/60) >= 9:
+				if (deltatime/60) >= 1:
 					break
 			
 			monitoramentoTerrestre = baixarMonitoramentoTerrestre()
@@ -500,17 +483,18 @@ def funcaoPrincipal():
 
 			pausaAcompanhamento = carregarParametros()["delayacompanhamento"]
 			agora = time.strftime('%H:%M')
-			print(f'Última atualização: {agora}\nPausa para acompanhamento de {pausaAcompanhamento} minutos... ')
-			time.sleep(int(pausaAcompanhamento)*60)
+			# print(f'Última atualização: {agora}\nPausa para acompanhamento de {pausaAcompanhamento} minutos... ')
+			# time.sleep(int(pausaAcompanhamento)*60)
 
 		except Exception as e:
 			if debug_mode:
 				print(e)
+				print(traceback.format_exc())
 			pass
 
 diretorio_robo = os.getcwd()
 user_name = os.getlogin()
-debug_mode = True
+debug_mode = False
 
 print('Abrindo driver Firefox')
 # profile_path = r'C:\Users\vdiassob\AppData\Roaming\Mozilla\Firefox\Profiles\eituekku.robo'
