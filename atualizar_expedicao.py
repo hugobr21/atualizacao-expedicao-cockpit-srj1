@@ -27,6 +27,8 @@ def apagarCSVs():
 def baixarArquivoGestaoDePacotes(xpathcompleto):
 	apagarCSVs()
 	driver.get('https://envios.mercadolivre.com.br/logistics/management-packages')
+	nome_do_arquivo = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\' + 'logistics_packages_' + '-'.join([time.strftime("%d"),time.strftime("%m"),time.strftime("%Y")]) + '.csv'
+	print(nome_do_arquivo)
 
 	# Baixa o arquivo
 	while True:
@@ -90,7 +92,7 @@ def baixarArquivoGestaoDePacotes(xpathcompleto):
 			arquivoGestaoDePacotes = arquivoGestaoDePacotes.loc[~ (arquivoGestaoDePacotes['ID do envio'].isna())]
 			arquivoGestaoDePacotes['ID do envio'] = arquivoGestaoDePacotes['ID do envio'].astype('str').str[:11]
 			arquivoGestaoDePacotes = arquivoGestaoDePacotes.fillna('')
-			print('Arquivo "{textodobotaodoarquivo}" carregado')
+			print(f'Arquivo "{textodobotaodoarquivo}" carregado')
 			return arquivoGestaoDePacotes
 		except Exception as e:
 			if debug_mode:
@@ -132,7 +134,7 @@ def funcaoPrincipal():
 
 diretorio_robo = os.getcwd()
 user_name = os.getlogin()
-debug_mode = True
+debug_mode = False
 
 print('Abrindo driver Firefox')
 # profile_path = r'C:\Users\vdiassob\AppData\Roaming\Mozilla\Firefox\Profiles\eituekku.robo'
