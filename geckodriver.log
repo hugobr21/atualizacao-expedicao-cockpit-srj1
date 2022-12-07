@@ -5249,3 +5249,390 @@ TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
 TimedPromise@chrome://remote/content/marionette/sync.js:221:10
 interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
 webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670420003171	geckodriver	INFO	Listening on 127.0.0.1:51078
+1670420003688	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51079" "-no-remote" "-profile" "C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileYK7Uz8"
+1670420005183	Marionette	INFO	Marionette enabled
+1670420005202	Marionette	INFO	Listening on port 51082
+WebDriver BiDi listening on ws://127.0.0.1:51079
+1670420005649	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileYK7Uz8\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51079/devtools/browser/4fd4f3be-faab-4899-b10b-5545d1409b68
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 103: WebGL context was lost.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 109: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 104: WebGL context was lost.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420267733	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670420275521	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670420283314	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670420291158	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670420298996	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670420306803	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670420314614	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670420322419	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420336081	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670420343916	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670420351704	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670420366956	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670420374764	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670420382541	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670420390349	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670420398163	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670420405959	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670420413734	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420428888	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420444093	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420459325	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420474411	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420489585	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420504807	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420520030	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420535217	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420550006	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420564667	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420579498	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420594223	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420609045	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420624270	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420638996	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420653704	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420668557	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420683643	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420698441	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420713522	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420728692	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420743946	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420758997	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420774083	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420788835	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420803605	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670420818331	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670420923263	geckodriver	INFO	Listening on 127.0.0.1:52673
+1670420923761	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52674" "-no-remote" "-profile" "C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileQ3gMDe"
+1670420925016	Marionette	INFO	Marionette enabled
+1670420925025	Marionette	INFO	Listening on port 52677
+WebDriver BiDi listening on ws://127.0.0.1:52674
+1670420925442	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\vdiassob\\AppData\\Local\\Temp\\1\\rust_mozprofileQ3gMDe\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52674/devtools/browser/90aa39e0-28ee-47ae-a820-d5126e71d7e4
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/login?platform_id=ML&go=https%3A%2F%2Fenvios.mercadolivre.com.br%2Flogistics%2Frouting%2Fplanification%2Fdownload&loginType=explicit, line 103: WebGL context was lost.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 108: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://www.mercadolivre.com/jms/mlb/lgz/msl/login/H4sIAAAAAAAEAzWOwY7DIAxE_8VnFO4c90eQAya1FjAyTtJV1X-v0KrH0cy8mRdUObhH-xsEAeg5Kic2cDAqWhFtkTMEaBUcTDb6yn1FULGRkU4IrwU6KP9QEV2ognUSOMDTHrFUuSH8b4EDnpGeRtqxxpv2i2m538YhEOBhNmbwnvrFMrdGmjBL5UtpS9K2Xf16Po3T9CqncT_8qNi5cEJj6T7L3atghreDgtOiKaZfCKYnvT8d83bX-QAAAA/enter-pass, line 103: WebGL context was lost.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.mercadolivre.com."
+JavaScript error: https://envios.mercadolivre.com.br/logistics/routing/planification/download line 110 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670421147201	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670421156024	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670421164811	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670421173594	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670421182375	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670421191156	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670421199981	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670421208764	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670421217559	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670421252139	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+JavaScript error: https://envios.mercadolivre.com.br/logistics/management-packages line 4 > injectedScript, line 75: TypeError: languageChangeButton.getInnerHTML is not a function
+1670421654886	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670421663687	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670421672481	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670421681295	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670421690081	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670421698893	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1670421707657	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31

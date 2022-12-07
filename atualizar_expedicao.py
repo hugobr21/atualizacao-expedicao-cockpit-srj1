@@ -1,5 +1,4 @@
 from google_api_functions import *
-# from atualizacao_goleiro import *
 from datetime import datetime 
 import pandas as pd
 import json
@@ -24,6 +23,66 @@ def apagarCSVs():
 	except Exception as e:
 		time.sleep(1)
 
+def baixarArquivoGestaoDePacotes(xpathcompleto):
+	driver.get('https://envios.mercadolivre.com.br/logistics/management-packages')
+	nome_do_arquivo = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\' + 'logistics_packages_' + '-'.join([time.strftime("%d"),time.strftime("%m"),time.strftime("%Y")]) + '.csv'
+	print(nome_do_arquivo)
+	contador = 0
+	# Baixa o arquivo
+	while True:
+		time.sleep(5)
+		try:
+			time.sleep(1)
+			driver.find_element(By.XPATH,'//*[@id="packages-management"]/div[1]/button').click()
+			time.sleep(2)
+			driver.find_element(By.XPATH,xpathcompleto).click()
+			for i in range(10):
+				time.sleep(1)
+				try:
+					driver.find_element(By.XPATH,'/html/body/main/div/div[2]/div/div/div[2]/div[2]/button').click()
+					break
+				except:
+					pass
+			break	
+		except:
+			if contador >= 10:
+				print('#1 Reiniciando página e download')
+				driver.get("https://envios.mercadolivre.com.br/logistics/management-packages")
+				time.sleep(6)
+				# funcao_principal()
+			print('erro ao baixar arquivo')
+			contador = contador + 1
+			pass
+	contador = 0
+	# Carrega e trata o arquivo
+	while True:
+		time.sleep(1)
+		try:
+			os.chdir(f'C:\\Users\\{user_name}\\Downloads')
+			emrotadeentrega = pd.read_csv([nomesDosArquivos for nomesDosArquivos in os.listdir() if ('logistics_packages' in nomesDosArquivos) and ('.part' not in nomesDosArquivos)][0])
+			os.chdir(diretorio_robo)
+			emrotadeentrega['ID do envio'] = pd.to_numeric(emrotadeentrega['ID do envio'], errors='coerce')
+			emrotadeentrega = emrotadeentrega.loc[~ (emrotadeentrega['ID do envio'].isna())]
+			emrotadeentrega['ID do envio'] = emrotadeentrega['ID do envio'].astype('str').str[:11]
+			emrotadeentrega = emrotadeentrega.fillna('')
+			os.remove(nome_do_arquivo)
+			print('Arquivo em rota de entrega carregado')
+			return emrotadeentrega
+		except Exception as e:
+			print(e)
+			contador = contador + 1
+			if contador >=100:
+				try:
+					os.remove(nome_do_arquivo)
+				except:
+					pass
+				print('#2 Reiniciando página e download')
+				driver.get("https://envios.mercadolivre.com.br/logistics/management-packages")
+				time.sleep(6)
+				raise KeyError
+			# print('erro ao carregar arquivo')
+			pass
+
 def baixarEmRotaDeEntrega():
 	driver.get('https://envios.mercadolivre.com.br/logistics/management-packages')
 	nome_do_arquivo = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\' + 'logistics_packages_' + '-'.join([time.strftime("%d"),time.strftime("%m"),time.strftime("%Y")]) + '.csv'
@@ -35,13 +94,15 @@ def baixarEmRotaDeEntrega():
 		try:
 			time.sleep(1)
 			driver.find_element(By.XPATH,'//*[@id="packages-management"]/div[1]/button').click()
-			time.sleep(1)
+			time.sleep(2)
 			driver.find_element(By.XPATH,'//*[@id="packages-management"]/div[1]/div/div[2]/div/div[3]/div[3]').click()
-			time.sleep(1)
-			driver.find_element(By.XPATH,'/html/body/main/div/div[2]/div/div/div[2]/div[2]/button').click()
-			# botao_baixar_emrotadeentrega = driver.find_element(By.XPATH,'/html/body/main/div/div/div/div/div/div[7]/button')
-			# botao_baixar_emrotadeentrega.click()
-			# # print('clicar p baixar')
+			for i in range(10):
+				time.sleep(1)
+				try:
+					driver.find_element(By.XPATH,'/html/body/main/div/div[2]/div/div/div[2]/div[2]/button').click()
+					break
+				except:
+					pass
 			break	
 		except:
 			if contador >= 10:
@@ -195,9 +256,10 @@ def funcaoPrincipal():
 		try:
 			apagarCSVs()
 
-			emRotaDeEntrega = baixarEmRotaDeEntrega().values.tolist()
-			entregue = baixarEntregues().values.tolist()
-			falhaDeEntrega = baixarFalhaDeEntrega().values.tolist()		
+			# driver.find_element(By.XPATH,'//*[@id="packages-management"]/div[1]/div/div[2]/div/div[3]/div[3]').click()
+			emRotaDeEntrega = baixarArquivoGestaoDePacotes('//*[@id="packages-management"]/div[1]/div/div[2]/div/div[3]/div[3]').values.tolist() 
+			entregue = baixarArquivoGestaoDePacotes('//*[@id="packages-management"]/div[1]/div/div[2]/div/div[3]/div[1]').values.tolist()
+			falhaDeEntrega = baixarArquivoGestaoDePacotes('//*[@id="packages-management"]/div[1]/div/div[2]/div/div[3]/div[2]').values.tolist()		
 			agora = time.strftime('%H:%M')
 			
 			ID_PLANILHA_BASE_COCKPIT = '1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ'
@@ -211,8 +273,6 @@ def funcaoPrincipal():
 			limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'ENTREGUES!A2:Y')
 			update_values(ID_PLANILHA_BASE_COCKPIT,'ENTREGUES!A2','USER_ENTERED',entregue)
 			
-
-
 			print(f'Última atualização: {agora}')
 			# exit()
 			print('Pausa para acompanhamento...')
