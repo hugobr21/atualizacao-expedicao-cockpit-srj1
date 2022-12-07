@@ -11,36 +11,6 @@ def carregarParametros():
 		parametros = json.load(infile)
 	return parametros
 
-def importarBasesDeRoteirizacao(nome_planilha,ciclo):
-	try:
-		try:
-			planilhaBase = pd.read_excel([nomeDoArquivo for nomeDoArquivo in os.listdir() if nome_planilha in nomeDoArquivo][0],sheet_name='Planilha1')
-		except:
-			planilhaBase = pd.read_excel([nomeDoArquivo for nomeDoArquivo in os.listdir() if nome_planilha in nomeDoArquivo][0],sheet_name='Plan1')
-		planilhaBase['Ciclo'] = ciclo
-		planilhaBase['Shipment'] = planilhaBase['Shipment'].astype('str')
-		return planilhaBase[['Shipment','Ciclo','Rota']]
-	except:
-		try:
-			planilhaBase = pd.read_excel(nome_planilha + '.xlsm',sheet_name='Planilha1')
-			planilhaBase['Ciclo'] = ciclo
-			planilhaBase['Shipment'] = planilhaBase['Shipment'].astype('str')
-			return planilhaBase[['Shipment','Ciclo','Rota']]
-		except:
-			return pd.DataFrame({'Shipment':[],'Rota':[],'Ciclo':[]})
-
-def importarPlanification():
-	try:
-		planification = pd.read_csv([nomeDoArquivo for nomeDoArquivo in os.listdir() if 'planification' in nomeDoArquivo][0])
-		planification['Shipment'] = planification['Shipment'].astype('str')
-		return planification
-	except:
-		print('Um erro ocorreu ao importar planification.')
-
-def atualizarBase(id_planilha,aba_range,dados_da_base):
-	limpar_celulas(id_planilha,aba_range)
-	update_values(id_planilha,aba_range, 'USER_ENTERED', dados_da_base)
-
 def apagarCSVs():
 	os.chdir(r'C:\\Users\\'+ user_name +'\\Downloads')
 	try:
@@ -53,91 +23,6 @@ def apagarCSVs():
 		pass
 	except Exception as e:
 		time.sleep(1)
-
-def baixar_planification():
-	driver.get('https://envios.mercadolivre.com.br/logistics/routing/planification/download')
-	nome_do_arquivo = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\' + 'planification_' + '_'.join([time.strftime("%d"),time.strftime("%m"),time.strftime("%Y")]) + '.csv'
-	# print(nome_do_arquivo)
-	contador = 0
-	while True:
-		time.sleep(5)
-		try:
-			driver.find_element(By.XPATH,'//*[@id="routing-downloads"]').click()
-			botao_baixar_planification = driver.find_element(By.XPATH,'/html/body/main/div/div/div/div/div/div[7]/button')
-			botao_baixar_planification.click()
-			# print('clicar p baixar')
-			break	
-		except:
-			if contador >= 10:
-				print('#1 Reiniciando página e download')
-				driver.get("https://envios.mercadolivre.com.br/logistics/routing/planification/download")
-				time.sleep(6)
-				# funcao_principal()
-			print('erro ao baixar arquivo')
-			contador = contador + 1
-			pass
-	contador = 0
-	while True:
-		time.sleep(1)
-		try:
-			os.chdir(f'C:\\Users\\{user_name}\\Downloads')
-			planification = pd.read_csv([nomesDosArquivos for nomesDosArquivos in os.listdir() if ('planification' in nomesDosArquivos) and ('.part' not in nomesDosArquivos)][0])
-			os.chdir(diretorio_robo)
-			planification['Shipment'] = pd.to_numeric(planification['Shipment'], errors='coerce')
-			planification = planification.loc[~ (planification['Status'].isna())]
-			planification = planification.loc[~ (planification['Shipment'].isna())]
-			planification['Shipment'] = planification['Shipment'].astype('str').str[:11]
-			os.remove(nome_do_arquivo)
-			print('Arquivo carregado')
-			return planification
-		except Exception as e:
-			print(e)
-			contador = contador + 1
-			if contador >=100:
-				try:
-					os.remove(nome_do_arquivo)
-				except:
-					pass
-				print('#2 Reiniciando página e download')
-				driver.get("https://envios.mercadolivre.com.br/logistics/routing/planification/download")
-				time.sleep(6)
-				raise KeyError
-			# print('erro ao carregar arquivo')
-			pass
-
-def funcao_principal(planilha_base_dash_svc,
-baseroteirizacao_aba_range,
-baseDeRoteirizacaoConsolidada,
-planification_aba_range,
-planification_roteirizacao):
-
-	# Sobe base de roteirizacao
-	atualizarBase(planilha_base_dash_svc, baseroteirizacao_aba_range, baseDeRoteirizacaoConsolidada)
-
-	# Sobe planification
-	atualizarBase(planilha_base_dash_svc, planification_aba_range, planification_roteirizacao)
-
-	print('Base atualizada!')
-	
-def carregarBaseEtiquetada():
-	data_agora = datetime(datetime.now().year,datetime.now().month,datetime.now().day,00,00,00).strftime("_%d_%m_%Y")
-	try:
-		base_atstation = pd.read_excel(f'mudanca_de_status_etiquetagem{data_agora}.xlsx')
-	except:
-		base_atstation = pd.DataFrame({'Shipment':[],'Mudança de Status':[],'Hora':[]})
-		base_atstation.to_excel(f'mudanca_de_status_etiquetagem{data_agora}.xlsx', index=False)
-	base_atstation['Shipment'] = base_atstation['Shipment'].astype('str')
-	return base_atstation
-
-def carregarBaseSorteado():
-	data_agora = datetime(datetime.now().year,datetime.now().month,datetime.now().day,00,00,00).strftime("_%d_%m_%Y")
-	try:
-		base_sorteado = pd.read_excel(f'mudanca_de_status_sorteado{data_agora}.xlsx')
-	except:
-		base_sorteado = pd.DataFrame({'Shipment':[],'Mudança de Status':[],'Hora':[]})
-		base_sorteado.to_excel(f'mudanca_de_status_sorteado{data_agora}.xlsx', index=False)
-	base_sorteado['Shipment'] = base_sorteado['Shipment'].astype('str')
-	return base_sorteado
 
 def baixarEmRotaDeEntrega():
 	driver.get('https://envios.mercadolivre.com.br/logistics/management-packages')
