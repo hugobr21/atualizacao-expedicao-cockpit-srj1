@@ -405,16 +405,14 @@ def baixarMonitoramentoTerrestre():
 			monitoramentoTerrestre = pd.read_csv(nome_do_arquivo)
 			os.remove(nome_do_arquivo)
 			os.chdir(diretorio_robo)
-			# monitoramentoTerrestre['ID do envio'] = pd.to_numeric(monitoramentoTerrestre['ID do envio'], errors='coerce')
-			# monitoramentoTerrestre = monitoramentoTerrestre.loc[~ (monitoramentoTerrestre['ID do envio'].isna())]
-			# monitoramentoTerrestre['ID do envio'] = monitoramentoTerrestre['ID do envio'].astype('str').str[:11]
 			
 			monitoramentoTerrestre = monitoramentoTerrestre.loc[monitoramentoTerrestre['Destino'].str.strip() == 'Srj1 (Rio Do Janeiro)']
 			limiteInferiorDataMonitoramento = datetime(datetime.now().year,datetime.now().month,datetime.now().day,00,00,00)
 			limiteSuperiorDataMonitoramento = datetime(datetime.now().year,datetime.now().month,datetime.now().day,23,59,59)
 			monitoramentoTerrestre = monitoramentoTerrestre.loc[
 				(pd.to_datetime(monitoramentoTerrestre['Destino ETA']) >= limiteInferiorDataMonitoramento) &
-			(pd.to_datetime(monitoramentoTerrestre['Destino ETA']) <= limiteSuperiorDataMonitoramento)
+			(pd.to_datetime(monitoramentoTerrestre['Destino ETA']) <= limiteSuperiorDataMonitoramento) &
+			((monitoramentoTerrestre['Status'] == 'Em curso') | (monitoramentoTerrestre['Status'] == 'Finalizado'))
 			]
 
 			monitoramentoTerrestre = monitoramentoTerrestre.fillna('')
