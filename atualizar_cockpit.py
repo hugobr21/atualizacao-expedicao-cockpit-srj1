@@ -92,7 +92,9 @@ def baixar_planification():
 			print('Arquivo carregado')
 			return planification
 		except Exception as e:
-			print(e)
+			if debug_mode:
+				print(e)
+				print(traceback.format_exc())
 			contador = contador + 1
 			if contador >=100:
 				try:
@@ -249,7 +251,9 @@ def baixarEmRotaDeEntrega():
 			print('Arquivo em rota de entrega carregado')
 			return emrotadeentrega
 		except Exception as e:
-			print(e)
+			if debug_mode:
+				print(e)
+				print(traceback.format_exc())
 			contador = contador + 1
 			if contador >=100:
 				try:
@@ -303,6 +307,7 @@ def baixarEntregues():
 			print('Arquivo baixar entregues carregado')
 			return entregues
 		except Exception as e:
+			
 			print(e)
 			contador = contador + 1
 			if contador >=100:
@@ -382,10 +387,6 @@ def baixarMonitoramentoTerrestre():
 		try:
 			time.sleep(1)
 			driver.find_element(By.XPATH,'//*[@id="button-download-csv"]').click()
-			# time.sleep(1)
-			# driver.find_element(By.XPATH,'//*[@id="packages-management"]/div[1]/div/div[2]/div/div[3]/div[2]').click()
-			# time.sleep(1)
-			# driver.find_element(By.XPATH,'/html/body/main/div/div[2]/div/div/div[2]/div[2]/button').click()
 			break	
 		except:
 			if contador >= 10:
@@ -419,8 +420,9 @@ def baixarMonitoramentoTerrestre():
 			print(f'Arquivo de rotas carregado - baixarmonitoramentoTerrestre')
 			return monitoramentoTerrestre
 		except Exception as e:
-			print(e)
-			print(traceback.format_exc())
+			if debug_mode:
+				print(e)
+				print(traceback.format_exc())
 			contador = contador + 1
 			if contador >=100:
 				try:
@@ -461,7 +463,8 @@ def funcaoPrincipal():
 				planification = baixar_planification()
 				etiquetagemESortingHoraHora = consolidarBaseSorteadoEtiquetado(planification=planification,baseDeRoteirizacao=baseDeRoteirizacao)
 				deltatime = time.time() - starttime
-				print(f'{deltatime} segundos')
+				if debug_mode:
+					print(f'{deltatime} segundos')
 				if (deltatime/60) >= 9:
 					break
 			
@@ -481,10 +484,6 @@ def funcaoPrincipal():
 
 			update_values(ID_PLANILHA_BASE_COCKPIT_1,'PLANIFICATION VIVO!AF2','USER_ENTERED',[[time.strftime("%d/%m/%Y %H:%M:%S")]])
 
-			pausaAcompanhamento = carregarParametros()["delayacompanhamento"]
-			agora = time.strftime('%H:%M')
-			# print(f'Última atualização: {agora}\nPausa para acompanhamento de {pausaAcompanhamento} minutos... ')
-			# time.sleep(int(pausaAcompanhamento)*60)
 
 		except Exception as e:
 			if debug_mode:
