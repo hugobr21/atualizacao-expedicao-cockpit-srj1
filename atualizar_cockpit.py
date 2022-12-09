@@ -210,7 +210,7 @@ def consolidarBaseSorteadoEtiquetado(planification,baseDeRoteirizacao):
 def baixarEmRotaDeEntrega():
 	driver.get('https://envios.mercadolivre.com.br/logistics/management-packages')
 	nome_do_arquivo = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\' + 'logistics_packages_' + '-'.join([time.strftime("%d"),time.strftime("%m"),time.strftime("%Y")]) + '.csv'
-	print(nome_do_arquivo)
+	# print(nome_do_arquivo)
 	contador = 0
 	# Baixa o arquivo
 	while True:
@@ -270,7 +270,7 @@ def baixarEmRotaDeEntrega():
 def baixarEntregues():
 	driver.get('https://envios.mercadolivre.com.br/logistics/management-packages')
 	nome_do_arquivo = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\' + 'logistics_packages_' + '-'.join([time.strftime("%d"),time.strftime("%m"),time.strftime("%Y")]) + '.csv'
-	print(nome_do_arquivo)
+	# print(nome_do_arquivo)
 	contador = 0
 	# Baixa o arquivo
 	while True:
@@ -325,7 +325,7 @@ def baixarEntregues():
 def baixarFalhaDeEntrega():
 	driver.get('https://envios.mercadolivre.com.br/logistics/management-packages')
 	nome_do_arquivo = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\' + 'logistics_packages_' + '-'.join([time.strftime("%d"),time.strftime("%m"),time.strftime("%Y")]) + '.csv'
-	print(nome_do_arquivo)
+	# print(nome_do_arquivo)
 	contador = 0
 	# Baixa o arquivo
 	while True:
@@ -379,7 +379,7 @@ def baixarFalhaDeEntrega():
 def baixarMonitoramentoTerrestre():
 	driver.get('https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes')
 	nome_do_arquivo = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\' + 'rotas.csv'
-	print(nome_do_arquivo)
+	# print(nome_do_arquivo)
 	contador = 0
 	# Baixa o arquivo
 	while True:
@@ -456,6 +456,7 @@ def funcaoPrincipal():
 	baseDeRoteirizacao = gerarBaseDeRoteirizacao()
 	while True:
 		try:
+			print('Atualizando hora/hora...')
 			starttime = time.time()
 
 			for i in range(100):
@@ -470,6 +471,7 @@ def funcaoPrincipal():
 			
 			monitoramentoTerrestre = baixarMonitoramentoTerrestre()
 			
+			print('Subindo bases para google sheets...')
 			ID_PLANILHA_BASE_COCKPIT_1 = '1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ'
 			ID_PLANILHA_BASE_COCKPIT_2 = '1PG_xZsWDPJjjYHRDkxuycBiRIzLwohx7BRl1Ca006A0'
 			
