@@ -1,16 +1,16 @@
 from msilib.schema import tables
 from operator import index
 from unicodedata import decimal
-import pandas as pd
-from pandas.tseries.offsets import DateOffset
+# import pandas as pd
+# from pandas.tseries.offsets import DateOffset
 import os
 from email import header
 from json import load
 from operator import index
 from unicodedata import decimal
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.common.by import By
+# from selenium import webdriver
+# from selenium.webdriver.firefox.options import Options
+# from selenium.webdriver.common.by import By
 import os
 # from __future__ import print_function
 import os.path
