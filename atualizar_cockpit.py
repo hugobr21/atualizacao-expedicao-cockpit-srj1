@@ -45,7 +45,8 @@ def apagarCSVs():
 	os.chdir(r'C:\\Users\\'+ user_name +'\\Downloads')
 	try:
 		nomesDosArquivos = [nomesDosArquivos for nomesDosArquivos in os.listdir() if ('.csv' in nomesDosArquivos) and ('.part' not in nomesDosArquivos)]
-		print('Pasta de download limpa.')
+		if debug_mode:
+			print('Pasta de download limpa.')
 		for arquivo in nomesDosArquivos:
 			os.remove(arquivo)
 		os.chdir(diretorio_robo)
@@ -89,7 +90,8 @@ def baixar_planification():
 			planification['Shipment'] = planification['Shipment'].astype('str').str[:11]
 			planification = planification.fillna('')
 			os.remove(nome_do_arquivo)
-			print('Arquivo carregado')
+			if debug_mode:
+				print('Arquivo carregado')
 			return planification
 		except Exception as e:
 			if debug_mode:
