@@ -27,12 +27,11 @@ def apagarCSVs():
 	except Exception as e:
 		time.sleep(1)
 
-def baixarArquivoGestaoDePacotes(xpathcompleto):
+def baixarArquivoGestaoDePacotes(xpathcompleto, arquivoSolicitado):
 	apagarCSVs()
 	driver.get('https://envios.mercadolivre.com.br/logistics/management-packages')
 	nome_do_arquivo = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\' + 'logistics_packages_' + '-'.join([time.strftime("%d"),time.strftime("%m"),time.strftime("%Y")]) + '.csv'
 	print(nome_do_arquivo)
-
 	# Baixa o arquivo
 	while True:
 		time.sleep(5)
@@ -44,6 +43,19 @@ def baixarArquivoGestaoDePacotes(xpathcompleto):
 			for i in range(20):
 				time.sleep(1)
 				try:
+					emTransito = [emTransito.text for emTransito in driver.find_elements(By.CLASS_NAME, "summarize-column")[2].find_elements(By.CLASS_NAME,'status-card')]
+					emTransito = [emTransito_.split('\n')[0] for emTransito_ in emTransito]
+					
+					if arquivoSolicitado not in emTransito:
+
+						columns = ['ID do envio', 'Status do envio', 'Subtatus do envio',
+       'Valor declarado', 'Destination Facility Type',
+       'Destination Facility ID', 'Rota', 'Promessa de entrega', 'Altura',
+       'Largura', 'Comprimento', 'Peso', 'Volume', 'Nome e sobrenome',
+       'Telefone', 'Tipo de Endereço', 'Endereço', 'Rua', 'Número',
+       'Referências', 'Cidade', 'State', 'bairro', 'Codigo Postal', 'Origem']
+
+						return pd.DataFrame(columns=columns)
 					botaodoarquivo = driver.find_element(By.XPATH,xpathcompleto)
 					textodobotaodoarquivo = botaodoarquivo.text.split('\n')[0]
 					time.sleep(3)
@@ -108,9 +120,9 @@ def funcaoPrincipal():
 		try:
 			apagarCSVs()
 
-			emRotaDeEntrega = baixarArquivoGestaoDePacotes('//*[@id="packages-management"]/div[1]/div/div[2]/div/div[3]/div[3]').values.tolist() 
-			entregue = baixarArquivoGestaoDePacotes('//*[@id="packages-management"]/div[1]/div/div[2]/div/div[3]/div[1]').values.tolist()
-			falhaDeEntrega = baixarArquivoGestaoDePacotes('//*[@id="packages-management"]/div[1]/div/div[2]/div/div[3]/div[2]').values.tolist()		
+			emRotaDeEntrega = baixarArquivoGestaoDePacotes('//*[@id="packages-management"]/div[1]/div/div[2]/div/div[3]/div[3]','Em rota de entrega').values.tolist() 
+			entregue = baixarArquivoGestaoDePacotes('//*[@id="packages-management"]/div[1]/div/div[2]/div/div[3]/div[1]','Entregues').values.tolist()
+			falhaDeEntrega = baixarArquivoGestaoDePacotes('//*[@id="packages-management"]/div[1]/div/div[2]/div/div[3]/div[2]','Falha de entrega').values.tolist()		
 			agora = time.strftime('%H:%M')
 			
 			ID_PLANILHA_BASE_COCKPIT = '1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ'
