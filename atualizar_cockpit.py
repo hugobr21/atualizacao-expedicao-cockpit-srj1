@@ -85,7 +85,7 @@ def baixar_planification():
 		time.sleep(1)
 		try:
 			os.chdir(f'C:\\Users\\{user_name}\\Downloads')
-			planification = pd.read_csv([nomesDosArquivos for nomesDosArquivos in os.listdir() if ('planification' in nomesDosArquivos) and ('.part' not in nomesDosArquivos)][0])
+			planification = pd.read_csv([nomesDosArquivos for nomesDosArquivos in os.listdir() if ('planification' in nomesDosArquivos) and ('.part' not in nomesDosArquivos)][0], low_memory = False)
 			os.chdir(diretorio_robo)
 			planification['Shipment'] = pd.to_numeric(planification['Shipment'], errors='coerce')
 			planification = planification.loc[~ (planification['Status'].isna())]
@@ -281,6 +281,7 @@ def funcaoPrincipal():
 		try:
 			print('Atualizando hora/hora...')
 			starttime = time.time()
+			etiquetagemFormsAM, etiquetagemFormsPM = importarEtiquetagemForms()
 
 			for i in range(100):
 				apagarCSVs()
@@ -289,11 +290,13 @@ def funcaoPrincipal():
 				deltatime = time.time() - starttime
 				if debug_mode:
 					print(f'{deltatime} segundos')
-				if (deltatime/60) >= 9:
+				if (deltatime/60) >= 5:
 					break
 			
 			monitoramentoTerrestre = baixarMonitoramentoTerrestre()
-			
+
+			etiquetagemFormsAM, etiquetagemFormsPM = importarEtiquetagemForms()
+
 			print('Subindo bases para google sheets...')
 			ID_PLANILHA_BASE_COCKPIT_1 = '1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ'
 			ID_PLANILHA_BASE_COCKPIT_2 = '1PG_xZsWDPJjjYHRDkxuycBiRIzLwohx7BRl1Ca006A0'
@@ -307,14 +310,48 @@ def funcaoPrincipal():
 			limpar_celulas(ID_PLANILHA_BASE_COCKPIT_2,'BASE AM!A2:E')
 			update_values(ID_PLANILHA_BASE_COCKPIT_2,'BASE AM!A2','USER_ENTERED',etiquetagemESortingHoraHora.values.tolist())
 
+			limpar_celulas(ID_PLANILHA_BASE_COCKPIT_1,'INFORMAÇÕES OP!AA3:AC')
+			update_values(ID_PLANILHA_BASE_COCKPIT_1,'INFORMAÇÕES OP!AA3','USER_ENTERED',etiquetagemFormsAM.values.tolist())
+			
+			limpar_celulas(ID_PLANILHA_BASE_COCKPIT_1,'INFORMAÇÕES OP!AD3:AF')
+			update_values(ID_PLANILHA_BASE_COCKPIT_1,'INFORMAÇÕES OP!AD3','USER_ENTERED',etiquetagemFormsPM.values.tolist())
+			
 			update_values(ID_PLANILHA_BASE_COCKPIT_1,'PLANIFICATION VIVO!AF2','USER_ENTERED',[[time.strftime("%d/%m/%Y %H:%M:%S")]])
-
 
 		except Exception as e:
 			if debug_mode:
 				print(e)
 				print(traceback.format_exc())
 			pass
+
+def importarEtiquetagemForms():
+    try:
+        inicioDoAM = get_values('1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ','INFORMAÇÕES OP!M3')[0][0]
+        inicioDoPM = get_values('1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ','INFORMAÇÕES OP!U3')[0][0]
+        tabelaHHDeReferenciaAM = pd.DataFrame({'Range de horas':pd.Series(pd.date_range(inicioDoAM,periods=8, freq="h")).dt.strftime('%H:%M'),\
+			'Hora de Processamento':pd.Series(pd.date_range(inicioDoAM,periods=8, freq="h")).index})
+        tabelaHHDeReferenciaPM = pd.DataFrame({'Range de horas':pd.Series(pd.date_range(inicioDoPM,periods=8, freq="h")).dt.strftime('%H:%M'),\
+			'Hora de Processamento':pd.Series(pd.date_range(inicioDoAM,periods=8, freq="h")).index})
+        dadosForms = get_values('15GKJ_Xa4m6J6bb7a59OnmUKgfRHB3cDmEFMN6PvBOmE','Respostas ao formulário 1!A1:F')
+        #print(dadosForms)
+        tabelaEtiquetagemForms = pd.DataFrame(dadosForms[1:],columns=dadosForms[0])
+        tabelaEtiquetagemForms['Hora de Processamento'] = tabelaEtiquetagemForms['Hora de Processamento'].astype('int8')
+        #print(tabelaEtiquetagemForms)
+        tabelaEtiquetagemForms = tabelaEtiquetagemForms.sort_values(by='Carimbo de data/hora', ascending=False).drop_duplicates(subset=['Ciclo','Hora de Processamento','Bancada','Data'])
+        tabelaEtiquetagemForms = tabelaEtiquetagemForms.sort_values(by=['Hora de Processamento','Bancada'], ascending=True)
+
+        #print(tabelaEtiquetagemForms)
+        colunasEtiquetagemForms = ['Range de horas','Bancada','Volume Etiquetado Por Estação']
+        etiquetagemFormsAM = tabelaEtiquetagemForms.loc[(tabelaEtiquetagemForms['Ciclo'] == 'AM') & \
+			(pd.to_datetime(tabelaEtiquetagemForms['Carimbo de data/hora']) >= datetime(datetime.now().year,datetime.now().month,datetime.now().day,00,00,00))].copy()
+        etiquetagemFormsPM = tabelaEtiquetagemForms.loc[(tabelaEtiquetagemForms['Ciclo'] == 'PM') & \
+			(pd.to_datetime(tabelaEtiquetagemForms['Carimbo de data/hora']) >= datetime(datetime.now().year,datetime.now().month,datetime.now().day,00,00,00))].copy()
+        etiquetagemFormsAM = etiquetagemFormsAM.merge(tabelaHHDeReferenciaAM.copy(), how='left', on='Hora de Processamento')[colunasEtiquetagemForms]
+        etiquetagemFormsPM = etiquetagemFormsPM.merge(tabelaHHDeReferenciaPM.copy(), how='left', on='Hora de Processamento')[colunasEtiquetagemForms]
+        return etiquetagemFormsAM,etiquetagemFormsPM
+    except:
+        if debug_mode:
+            print(traceback.format_exc())
 
 diretorio_robo = os.getcwd()
 user_name = os.getlogin()
