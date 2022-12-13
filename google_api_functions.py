@@ -1,16 +1,11 @@
 from msilib.schema import tables
 from operator import index
 from unicodedata import decimal
-# import pandas as pd
-# from pandas.tseries.offsets import DateOffset
 import os
 from email import header
 from json import load
 from operator import index
 from unicodedata import decimal
-# from selenium import webdriver
-# from selenium.webdriver.firefox.options import Options
-# from selenium.webdriver.common.by import By
 import os
 # from __future__ import print_function
 import os.path
@@ -105,3 +100,42 @@ def update_values(spreadsheet_id, range_name, value_input_option,
     print('{0} cells updated.'.format(result.get('updatedCells')))
     # [END sheets_update_values]
     return result
+
+def get_values(spreadsheet_id, range_name):
+    """
+    Creates the batch_update the user has access to.
+    Load pre-authorized user credentials from the environment.
+    TODO(developer) - See https://developers.google.com/identity
+    for guides on implementing OAuth2 for the application.
+        """
+    creds = None
+    # The file token.json stores the user's access and refresh tokens, and is
+    # created automatically when the authorization flow completes for the first
+    # time.
+    if os.path.exists('token.json'):
+        creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+    # If there are no (valid) credentials available, let the user log in.
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            flow = InstalledAppFlow.from_client_secrets_file(
+                'credentials.json', SCOPES)
+            creds = flow.run_local_server(port=0)
+        # Save the credentials for the next run
+        with open('token.json', 'w') as token:
+            token.write(creds.to_json())
+
+    # creds, _ = google.auth.default()
+    # pylint: disable=maybe-no-member
+    try:
+        service = build('sheets', 'v4', credentials=creds)
+
+        result = service.spreadsheets().values().get(
+            spreadsheetId=spreadsheet_id, range=range_name).execute()
+        rows = result.get('values', [])
+        print(f"{len(rows)} rows retrieved")
+        return result["values"]
+    except HttpError as error:
+        print(f"An error occurred: {error}")
+        return error
