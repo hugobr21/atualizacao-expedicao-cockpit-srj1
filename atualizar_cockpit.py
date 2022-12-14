@@ -281,7 +281,6 @@ def funcaoPrincipal():
 		try:
 			print('Atualizando hora/hora...')
 			starttime = time.time()
-			etiquetagemFormsAM, etiquetagemFormsPM = importarEtiquetagemForms()
 
 			for i in range(100):
 				apagarCSVs()
@@ -290,7 +289,7 @@ def funcaoPrincipal():
 				deltatime = time.time() - starttime
 				if debug_mode:
 					print(f'{deltatime} segundos')
-				if (deltatime/60) >= 5:
+				if (deltatime/60) >= int(carregarParametros()["deltaminuto"]):
 					break
 			
 			monitoramentoTerrestre = baixarMonitoramentoTerrestre()
@@ -298,9 +297,13 @@ def funcaoPrincipal():
 			etiquetagemFormsAM, etiquetagemFormsPM = importarEtiquetagemForms()
 
 			print('Subindo bases para google sheets...')
-			ID_PLANILHA_BASE_COCKPIT_1 = '1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ'
-			ID_PLANILHA_BASE_COCKPIT_2 = '1PG_xZsWDPJjjYHRDkxuycBiRIzLwohx7BRl1Ca006A0'
+
+			ID_PLANILHA_BASE_COCKPIT_1 = carregarParametros()["ID_PLANILHA_BASE_COCKPIT_1"]
+			ID_PLANILHA_BASE_COCKPIT_2 = carregarParametros()["ID_PLANILHA_BASE_COCKPIT_2"]
 			
+			# ID_PLANILHA_BASE_COCKPIT_1 = '1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ'
+			# ID_PLANILHA_BASE_COCKPIT_2 = '1PG_xZsWDPJjjYHRDkxuycBiRIzLwohx7BRl1Ca006A0'
+
 			limpar_celulas(ID_PLANILHA_BASE_COCKPIT_1,'PLANIFICATION VIVO!A2:AE')
 			update_values(ID_PLANILHA_BASE_COCKPIT_1,'PLANIFICATION VIVO!A2','USER_ENTERED',planification.values.tolist())
 			

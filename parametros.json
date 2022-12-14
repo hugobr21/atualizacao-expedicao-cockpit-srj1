@@ -1,1 +1,9 @@
-{"caminhonavegador": "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe", "idplanilha": "a", "linkdolooker": "a", "delayprecarregamento": "1", "delayacompanhamento": "2", "delayclicweb": "1"}
+{"caminhonavegador": "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe", 
+"idplanilha": "a", 
+"linkdolooker": "a", 
+"delayprecarregamento": "1", 
+"delayacompanhamento": "1", 
+"deltaminuto": "5",
+"ID_PLANILHA_BASE_COCKPIT_1":"1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ",
+"ID_PLANILHA_BASE_COCKPIT_2":"1PG_xZsWDPJjjYHRDkxuycBiRIzLwohx7BRl1Ca006A0"
+}

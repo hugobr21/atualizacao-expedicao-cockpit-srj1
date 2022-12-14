@@ -46,7 +46,13 @@ def baixarArquivoGestaoDePacotes(xpathcompleto, arquivoSolicitado):
 					emTransito = [emTransito.text for emTransito in driver.find_elements(By.CLASS_NAME, "summarize-column")[2].find_elements(By.CLASS_NAME,'status-card')]
 					emTransito = [emTransito_.split('\n')[0] for emTransito_ in emTransito]
 					
-					if arquivoSolicitado not in emTransito:
+					naEstacao = [naEstacao.text for naEstacao in driver.find_elements(By.CLASS_NAME, "summarize-column")[1].find_elements(By.CLASS_NAME,'status-card')]
+					naEstacao = [naEstacao_.split('\n')[0] for naEstacao_ in naEstacao]
+					
+					naEstacao2 = [naEstacao2.text for naEstacao2 in driver.find_elements(By.CLASS_NAME, "summarize-column")[1].find_elements(By.CLASS_NAME,'status-card--stale status-card')]
+					naEstacao2 = [naEstacao2.split('\n')[0] for naEstacao2 in naEstacao2]
+					
+					if (arquivoSolicitado not in emTransito) and (arquivoSolicitado not in naEstacao) and (arquivoSolicitado not in naEstacao2):
 
 						columns = ['ID do envio', 'Status do envio', 'Subtatus do envio',
        'Valor declarado', 'Destination Facility Type',
@@ -123,9 +129,11 @@ def funcaoPrincipal():
 			emRotaDeEntrega = baixarArquivoGestaoDePacotes('//*[@id="packages-management"]/div[1]/div/div[2]/div/div[3]/div[3]','Em rota de entrega').values.tolist() 
 			entregue = baixarArquivoGestaoDePacotes('//*[@id="packages-management"]/div[1]/div/div[2]/div/div[3]/div[1]','Entregues').values.tolist()
 			falhaDeEntrega = baixarArquivoGestaoDePacotes('//*[@id="packages-management"]/div[1]/div/div[2]/div/div[3]/div[2]','Falha de entrega').values.tolist()		
+			solucaoDeProblemas = baixarArquivoGestaoDePacotes('/html/body/main/div/div[2]/div/div/div[1]/div/div[2]/div/div[2]/div[5]','Para solução de problemas').values.tolist()		
+			paraDevolucao = baixarArquivoGestaoDePacotes('/html/body/main/div/div[2]/div/div/div[1]/div/div[2]/div/div[2]/div[3]','Para devolução').values.tolist()		
 			agora = time.strftime('%H:%M')
 			
-			ID_PLANILHA_BASE_COCKPIT = '1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ'
+			ID_PLANILHA_BASE_COCKPIT = carregarParametros()["ID_PLANILHA_BASE_COCKPIT_1"]
 			
 			limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'FALHA DE ENTREGA!A2:Y')
 			update_values(ID_PLANILHA_BASE_COCKPIT,'FALHA DE ENTREGA!A2','USER_ENTERED',falhaDeEntrega)
@@ -136,11 +144,17 @@ def funcaoPrincipal():
 			limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'ENTREGUES!A2:Y')
 			update_values(ID_PLANILHA_BASE_COCKPIT,'ENTREGUES!A2','USER_ENTERED',entregue)
 			
+			limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'SOLUÇÃO DE PROBLEMAS!A2:Y')
+			update_values(ID_PLANILHA_BASE_COCKPIT,'ENTREGUES!A2','USER_ENTERED',solucaoDeProblemas)
+			
+			limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'DEVOLUÇÃO!A2:Y')
+			update_values(ID_PLANILHA_BASE_COCKPIT,'ENTREGUES!A2','USER_ENTERED',paraDevolucao)
+			
 			print(f'Última atualização: {agora}')
 			
 			print('Pausa para acompanhamento...')
 			# time.sleep(int(carregarParametros()["delayacompanhamento"])*60)
-			time.sleep(10*60)
+			time.sleep(5*60)
 
 		except Exception as e:
 			if debug_mode:
