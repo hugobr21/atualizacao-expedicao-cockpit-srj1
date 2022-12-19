@@ -54,16 +54,17 @@ def baixarArquivoGestaoDePacotes(xpathcompleto, arquivoSolicitado):
 					naEstacao2 = [naEstacao2.text for naEstacao2 in driver.find_elements(By.CLASS_NAME, "summarize-column")[1].find_elements(By.CLASS_NAME,'status-card--stale status-card')]
 					naEstacao2 = [naEstacao2.split('\n')[0] for naEstacao2 in naEstacao2]
 					
-					if (arquivoSolicitado not in emTransito) and (arquivoSolicitado not in naEstacao) and (arquivoSolicitado not in naEstacao2):
+	# 				if (arquivoSolicitado not in emTransito) and (arquivoSolicitado not in naEstacao) and (arquivoSolicitado not in naEstacao2):
 
-						columns = ['ID do envio', 'Status do envio', 'Subtatus do envio',
-       'Valor declarado', 'Destination Facility Type',
-       'Destination Facility ID', 'Rota', 'Promessa de entrega', 'Altura',
-       'Largura', 'Comprimento', 'Peso', 'Volume', 'Nome e sobrenome',
-       'Telefone', 'Tipo de Endereço', 'Endereço', 'Rua', 'Número',
-       'Referências', 'Cidade', 'State', 'bairro', 'Codigo Postal', 'Origem']
+	# 					columns = ['ID do envio', 'Status do envio', 'Subtatus do envio',
+    #    'Valor declarado', 'Destination Facility Type',
+    #    'Destination Facility ID', 'Rota', 'Promessa de entrega', 'Altura',
+    #    'Largura', 'Comprimento', 'Peso', 'Volume', 'Nome e sobrenome',
+    #    'Telefone', 'Tipo de Endereço', 'Endereço', 'Rua', 'Número',
+    #    'Referências', 'Cidade', 'State', 'bairro', 'Codigo Postal', 'Origem']
 
-						return pd.DataFrame(columns=columns)
+	# 					return pd.DataFrame(columns=columns)
+
 					botaodoarquivo = driver.find_element(By.XPATH,xpathcompleto)
 					textodobotaodoarquivo = botaodoarquivo.text.split('\n')[0]
 					time.sleep(3)
@@ -75,7 +76,18 @@ def baixarArquivoGestaoDePacotes(xpathcompleto, arquivoSolicitado):
 					if debug_mode:
 						print(traceback.format_exc())
 					pass
-			
+
+			if (arquivoSolicitado not in emTransito) and (arquivoSolicitado not in naEstacao) and (arquivoSolicitado not in naEstacao2):
+
+				columns = ['ID do envio', 'Status do envio', 'Subtatus do envio',
+'Valor declarado', 'Destination Facility Type',
+'Destination Facility ID', 'Rota', 'Promessa de entrega', 'Altura',
+'Largura', 'Comprimento', 'Peso', 'Volume', 'Nome e sobrenome',
+'Telefone', 'Tipo de Endereço', 'Endereço', 'Rua', 'Número',
+'Referências', 'Cidade', 'State', 'bairro', 'Codigo Postal', 'Origem']
+
+				return pd.DataFrame(columns=columns)
+
 			# Loop para clicar no botão de baixar o arquivo
 			for i in range(20):
 				time.sleep(1)
