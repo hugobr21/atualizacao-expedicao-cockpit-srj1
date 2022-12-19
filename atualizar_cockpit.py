@@ -77,7 +77,9 @@ def baixar_planification():
 				driver.get("https://envios.mercadolivre.com.br/logistics/routing/planification/download")
 				time.sleep(6)
 				# funcao_principal()
-			print('erro ao baixar arquivo')
+			if debug_mode:
+				print('erro ao baixar arquivo')
+				print(traceback.format_exc())
 			contador = contador + 1
 			pass
 	contador = 0
