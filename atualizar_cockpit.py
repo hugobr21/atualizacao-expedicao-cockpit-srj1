@@ -294,15 +294,15 @@ def funcaoPrincipal():
 			
 			monitoramentoTerrestre = baixarMonitoramentoTerrestre()
 
-			etiquetagemFormsAM, etiquetagemFormsPM = importarEtiquetagemForms()
+			# etiquetagemFormsAM, etiquetagemFormsPM = importarEtiquetagemForms()
 
 			print('Subindo bases para google sheets...')
 
-			ID_PLANILHA_BASE_COCKPIT_1 = carregarParametros()["ID_PLANILHA_BASE_COCKPIT_1"]
-			ID_PLANILHA_BASE_COCKPIT_2 = carregarParametros()["ID_PLANILHA_BASE_COCKPIT_2"]
+			# ID_PLANILHA_BASE_COCKPIT_1 = carregarParametros()["ID_PLANILHA_BASE_COCKPIT_1"]
+			# ID_PLANILHA_BASE_COCKPIT_2 = carregarParametros()["ID_PLANILHA_BASE_COCKPIT_2"]
 			
-			# ID_PLANILHA_BASE_COCKPIT_1 = '1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ'
-			# ID_PLANILHA_BASE_COCKPIT_2 = '1PG_xZsWDPJjjYHRDkxuycBiRIzLwohx7BRl1Ca006A0'
+			ID_PLANILHA_BASE_COCKPIT_1 = '1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ'
+			ID_PLANILHA_BASE_COCKPIT_2 = '1PG_xZsWDPJjjYHRDkxuycBiRIzLwohx7BRl1Ca006A0'
 
 			limpar_celulas(ID_PLANILHA_BASE_COCKPIT_1,'PLANIFICATION VIVO!A2:AE')
 			update_values(ID_PLANILHA_BASE_COCKPIT_1,'PLANIFICATION VIVO!A2','USER_ENTERED',planification.values.tolist())
@@ -313,11 +313,11 @@ def funcaoPrincipal():
 			limpar_celulas(ID_PLANILHA_BASE_COCKPIT_2,'BASE AM!A2:E')
 			update_values(ID_PLANILHA_BASE_COCKPIT_2,'BASE AM!A2','USER_ENTERED',etiquetagemESortingHoraHora.values.tolist())
 
-			limpar_celulas(ID_PLANILHA_BASE_COCKPIT_1,'INFORMAÇÕES OP!AA3:AC')
-			update_values(ID_PLANILHA_BASE_COCKPIT_1,'INFORMAÇÕES OP!AA3','USER_ENTERED',etiquetagemFormsAM.values.tolist())
+			# limpar_celulas(ID_PLANILHA_BASE_COCKPIT_1,'INFORMAÇÕES OP!AA3:AC')
+			# update_values(ID_PLANILHA_BASE_COCKPIT_1,'INFORMAÇÕES OP!AA3','USER_ENTERED',etiquetagemFormsAM.values.tolist())
 			
-			limpar_celulas(ID_PLANILHA_BASE_COCKPIT_1,'INFORMAÇÕES OP!AD3:AF')
-			update_values(ID_PLANILHA_BASE_COCKPIT_1,'INFORMAÇÕES OP!AD3','USER_ENTERED',etiquetagemFormsPM.values.tolist())
+			# limpar_celulas(ID_PLANILHA_BASE_COCKPIT_1,'INFORMAÇÕES OP!AD3:AF')
+			# update_values(ID_PLANILHA_BASE_COCKPIT_1,'INFORMAÇÕES OP!AD3','USER_ENTERED',etiquetagemFormsPM.values.tolist())
 			
 			update_values(ID_PLANILHA_BASE_COCKPIT_1,'PLANIFICATION VIVO!AF2','USER_ENTERED',[[time.strftime("%d/%m/%Y %H:%M:%S")]])
 
@@ -358,7 +358,7 @@ def importarEtiquetagemForms():
 
 diretorio_robo = os.getcwd()
 user_name = os.getlogin()
-debug_mode = False
+debug_mode = True
 
 print('Abrindo driver Firefox')
 # profile_path = r'C:\Users\vdiassob\AppData\Roaming\Mozilla\Firefox\Profiles\eituekku.robo'
