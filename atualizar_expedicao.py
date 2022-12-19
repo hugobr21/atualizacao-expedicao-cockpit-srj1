@@ -18,7 +18,8 @@ def apagarCSVs():
 	os.chdir(r'C:\\Users\\'+ user_name +'\\Downloads')
 	try:
 		nomesDosArquivos = [nomesDosArquivos for nomesDosArquivos in os.listdir() if ('.csv' in nomesDosArquivos) and ('.part' not in nomesDosArquivos)]
-		print('Pasta de download limpa.')
+		if debug_mode:
+			print('Pasta de download limpa.')
 		for arquivo in nomesDosArquivos:
 			os.remove(arquivo)
 		os.chdir(diretorio_robo)
@@ -31,7 +32,8 @@ def baixarArquivoGestaoDePacotes(xpathcompleto, arquivoSolicitado):
 	apagarCSVs()
 	driver.get('https://envios.mercadolivre.com.br/logistics/management-packages')
 	nome_do_arquivo = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\' + 'logistics_packages_' + '-'.join([time.strftime("%d"),time.strftime("%m"),time.strftime("%Y")]) + '.csv'
-	print(nome_do_arquivo)
+	if debug_mode:
+		print(nome_do_arquivo)
 	# Baixa o arquivo
 	while True:
 		time.sleep(5)
@@ -159,6 +161,7 @@ def funcaoPrincipal():
 		except Exception as e:
 			if debug_mode:
 				print(e)
+				print(traceback.format_exc())
 			pass
 
 diretorio_robo = os.getcwd()
