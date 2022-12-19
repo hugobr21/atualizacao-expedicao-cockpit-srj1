@@ -137,21 +137,28 @@ def funcaoPrincipal():
 			
 			ID_PLANILHA_BASE_COCKPIT = "1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ"
 			
-			limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'FALHA DE ENTREGA!A2:Y')
-			update_values(ID_PLANILHA_BASE_COCKPIT,'FALHA DE ENTREGA!A2','USER_ENTERED',falhaDeEntrega)
-			
-			limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'EM ROTA DE ENTREGA!A2:Y')
-			update_values(ID_PLANILHA_BASE_COCKPIT,'EM ROTA DE ENTREGA!A2','USER_ENTERED',emRotaDeEntrega)
+			for i in range(5):
+				try:
+					limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'FALHA DE ENTREGA!A2:Y')
+					update_values(ID_PLANILHA_BASE_COCKPIT,'FALHA DE ENTREGA!A2','USER_ENTERED',falhaDeEntrega)
+					
+					limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'EM ROTA DE ENTREGA!A2:Y')
+					update_values(ID_PLANILHA_BASE_COCKPIT,'EM ROTA DE ENTREGA!A2','USER_ENTERED',emRotaDeEntrega)
 
-			limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'ENTREGUES!A2:Y')
-			update_values(ID_PLANILHA_BASE_COCKPIT,'ENTREGUES!A2','USER_ENTERED',entregue)
-			
-			limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'SOLUÇÃO DE PROBLEMAS!A2:Y')
-			update_values(ID_PLANILHA_BASE_COCKPIT,'ENTREGUES!A2','USER_ENTERED',solucaoDeProblemas)
-			
-			limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'DEVOLUÇÃO!A2:Y')
-			update_values(ID_PLANILHA_BASE_COCKPIT,'ENTREGUES!A2','USER_ENTERED',paraDevolucao)
-			
+					limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'ENTREGUES!A2:Y')
+					update_values(ID_PLANILHA_BASE_COCKPIT,'ENTREGUES!A2','USER_ENTERED',entregue)
+					
+					limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'SOLUÇÃO DE PROBLEMAS!A2:Y')
+					update_values(ID_PLANILHA_BASE_COCKPIT,'ENTREGUES!A2','USER_ENTERED',solucaoDeProblemas)
+					
+					limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'DEVOLUÇÃO!A2:Y')
+					update_values(ID_PLANILHA_BASE_COCKPIT,'ENTREGUES!A2','USER_ENTERED',paraDevolucao)
+					break
+				except:
+					if debug_mode:
+						print(traceback.format_exc())
+						pass
+
 			print(f'Última atualização: {agora}')
 			
 			print('Pausa para acompanhamento...')
