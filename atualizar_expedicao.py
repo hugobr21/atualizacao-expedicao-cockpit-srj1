@@ -45,6 +45,9 @@ def baixarArquivoGestaoDePacotes(xpathcompleto, arquivoSolicitado):
 			for i in range(20):
 				time.sleep(1)
 				try:
+					for i in driver.find_elements(By.CLASS_NAME, "status-card__title"):
+						if i.text.strip() == arquivoSolicitado:
+							botaodoarquivo = i
 					emTransito = [emTransito.text for emTransito in driver.find_elements(By.CLASS_NAME, "summarize-column")[2].find_elements(By.CLASS_NAME,'status-card')]
 					emTransito = [emTransito_.split('\n')[0] for emTransito_ in emTransito]
 					
@@ -65,7 +68,7 @@ def baixarArquivoGestaoDePacotes(xpathcompleto, arquivoSolicitado):
 
 	# 					return pd.DataFrame(columns=columns)
 
-					botaodoarquivo = driver.find_element(By.XPATH,xpathcompleto)
+					# botaodoarquivo = driver.find_element(By.XPATH,xpathcompleto)
 					textodobotaodoarquivo = botaodoarquivo.text.split('\n')[0]
 					time.sleep(3)
 					botaodoarquivo.click()
