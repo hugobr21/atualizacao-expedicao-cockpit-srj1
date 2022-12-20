@@ -169,13 +169,12 @@ def funcaoPrincipal():
 				except:
 					if debug_mode:
 						print(traceback.format_exc())
-						pass
+					pass
 
 			print(f'Última atualização: {agora}')
 			
 			print('Pausa para acompanhamento...')
-			# time.sleep(int(carregarParametros()["delayacompanhamento"])*60)
-			time.sleep(5*60)
+			time.sleep(int(carregarParametros()["delayAcompanhamentoExpedicao"])*60)
 
 		except Exception as e:
 			if debug_mode:

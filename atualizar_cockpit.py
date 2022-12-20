@@ -233,7 +233,8 @@ def baixarMonitoramentoTerrestre():
 			os.remove(nome_do_arquivo)
 			os.chdir(diretorio_robo)
 			
-			monitoramentoTerrestre = monitoramentoTerrestre.loc[monitoramentoTerrestre['Destino'].str.strip() == 'Srj1 (Rio Do Janeiro)']
+			# monitoramentoTerrestre = monitoramentoTerrestre.loc[monitoramentoTerrestre['Destino'].str.strip() == 'Srj1 (Rio Do Janeiro)']
+			monitoramentoTerrestre = monitoramentoTerrestre.loc[monitoramentoTerrestre['Destino'].str.strip() == carregarParametros()["destinoLH"]]
 			limiteInferiorDataMonitoramento = datetime(datetime.now().year,datetime.now().month,datetime.now().day,00,00,00)
 			limiteSuperiorDataMonitoramento = datetime(datetime.now().year,datetime.now().month,datetime.now().day,23,59,59)
 			monitoramentoTerrestre = monitoramentoTerrestre.loc[
@@ -292,7 +293,7 @@ def funcaoPrincipal():
 				deltatime = time.time() - starttime
 				if debug_mode:
 					print(f'{deltatime} segundos')
-				if (deltatime/60) >= int(carregarParametros()["deltaminuto"]):
+				if (deltatime/60) >= int(carregarParametros()["duracaoAtualizacaoHoraHora"]):
 					break
 			
 			monitoramentoTerrestre = baixarMonitoramentoTerrestre()
@@ -301,28 +302,28 @@ def funcaoPrincipal():
 
 			print('Subindo bases para google sheets...')
 
-			# ID_PLANILHA_BASE_COCKPIT_1 = carregarParametros()["ID_PLANILHA_BASE_COCKPIT_1"]
-			# ID_PLANILHA_BASE_COCKPIT_2 = carregarParametros()["ID_PLANILHA_BASE_COCKPIT_2"]
+			ID_PLANILHA_BASE_COCKPIT = carregarParametros()["ID_PLANILHA_BASE_COCKPIT"]
+			ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHH = carregarParametros()["ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHH"]
 			
-			ID_PLANILHA_BASE_COCKPIT_1 = '1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ'
-			ID_PLANILHA_BASE_COCKPIT_2 = '1PG_xZsWDPJjjYHRDkxuycBiRIzLwohx7BRl1Ca006A0'
+			# ID_PLANILHA_BASE_COCKPIT = '1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ'
+			# ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHH = '1PG_xZsWDPJjjYHRDkxuycBiRIzLwohx7BRl1Ca006A0'
 
-			limpar_celulas(ID_PLANILHA_BASE_COCKPIT_1,'PLANIFICATION VIVO!A2:AE')
-			update_values(ID_PLANILHA_BASE_COCKPIT_1,'PLANIFICATION VIVO!A2','USER_ENTERED',planification.values.tolist())
+			limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'PLANIFICATION VIVO!A2:AE')
+			update_values(ID_PLANILHA_BASE_COCKPIT,'PLANIFICATION VIVO!A2','USER_ENTERED',planification.values.tolist())
 			
-			limpar_celulas(ID_PLANILHA_BASE_COCKPIT_1,'MON. TERRESTE!A2:AS')
-			update_values(ID_PLANILHA_BASE_COCKPIT_1,'MON. TERRESTE!A2','USER_ENTERED',monitoramentoTerrestre.values.tolist())
+			limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'MON. TERRESTE!A2:AS')
+			update_values(ID_PLANILHA_BASE_COCKPIT,'MON. TERRESTE!A2','USER_ENTERED',monitoramentoTerrestre.values.tolist())
 			
-			limpar_celulas(ID_PLANILHA_BASE_COCKPIT_2,'BASE AM!A2:E')
-			update_values(ID_PLANILHA_BASE_COCKPIT_2,'BASE AM!A2','USER_ENTERED',etiquetagemESortingHoraHora.values.tolist())
+			limpar_celulas(ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHH,'BASE AM!A2:E')
+			update_values(ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHH,'BASE AM!A2','USER_ENTERED',etiquetagemESortingHoraHora.values.tolist())
 
-			# limpar_celulas(ID_PLANILHA_BASE_COCKPIT_1,'INFORMAÇÕES OP!AA3:AC')
-			# update_values(ID_PLANILHA_BASE_COCKPIT_1,'INFORMAÇÕES OP!AA3','USER_ENTERED',etiquetagemFormsAM.values.tolist())
+			# limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'INFORMAÇÕES OP!AA3:AC')
+			# update_values(ID_PLANILHA_BASE_COCKPIT,'INFORMAÇÕES OP!AA3','USER_ENTERED',etiquetagemFormsAM.values.tolist())
 			
-			# limpar_celulas(ID_PLANILHA_BASE_COCKPIT_1,'INFORMAÇÕES OP!AD3:AF')
-			# update_values(ID_PLANILHA_BASE_COCKPIT_1,'INFORMAÇÕES OP!AD3','USER_ENTERED',etiquetagemFormsPM.values.tolist())
+			# limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'INFORMAÇÕES OP!AD3:AF')
+			# update_values(ID_PLANILHA_BASE_COCKPIT,'INFORMAÇÕES OP!AD3','USER_ENTERED',etiquetagemFormsPM.values.tolist())
 			
-			update_values(ID_PLANILHA_BASE_COCKPIT_1,'PLANIFICATION VIVO!AF2','USER_ENTERED',[[time.strftime("%d/%m/%Y %H:%M:%S")]])
+			update_values(ID_PLANILHA_BASE_COCKPIT,'PLANIFICATION VIVO!AF2','USER_ENTERED',[[time.strftime("%d/%m/%Y %H:%M:%S")]])
 
 		except Exception as e:
 			if debug_mode:
