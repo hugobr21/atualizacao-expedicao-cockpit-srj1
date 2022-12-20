@@ -234,7 +234,7 @@ def baixarMonitoramentoTerrestre():
 			os.chdir(diretorio_robo)
 			
 			# monitoramentoTerrestre = monitoramentoTerrestre.loc[monitoramentoTerrestre['Destino'].str.strip() == 'Srj1 (Rio Do Janeiro)']
-			monitoramentoTerrestre = monitoramentoTerrestre.loc[monitoramentoTerrestre['Destino'].str.strip() == carregarParametros()["destinoLH"]]
+			monitoramentoTerrestre = monitoramentoTerrestre.loc[monitoramentoTerrestre['Destino'].str.strip() == carregarParametros()["destinoLH"].strip()]
 			limiteInferiorDataMonitoramento = datetime(datetime.now().year,datetime.now().month,datetime.now().day,00,00,00)
 			limiteSuperiorDataMonitoramento = datetime(datetime.now().year,datetime.now().month,datetime.now().day,23,59,59)
 			monitoramentoTerrestre = monitoramentoTerrestre.loc[
