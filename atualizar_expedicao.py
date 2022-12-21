@@ -150,7 +150,7 @@ def funcaoPrincipal():
 			paraDevolucao = baixarArquivoGestaoDePacotes('/html/body/main/div/div[2]/div/div/div[1]/div/div[2]/div/div[2]/div[3]','Para devolução').values.tolist()		
 			agora = time.strftime('%H:%M')
 			
-			ID_PLANILHA_BASE_COCKPIT = "1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ"
+			ID_PLANILHA_BASE_COCKPIT = carregarParametros()["ID_PLANILHA_BASE_COCKPIT"]
 			
 			for i in range(5):
 				try:
