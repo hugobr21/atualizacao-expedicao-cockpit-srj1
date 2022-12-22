@@ -198,6 +198,7 @@ def consolidarBaseSorteadoEtiquetado(planification,baseDeRoteirizacao):
 	sorteadoEtiquetadoConsolidado = pd.concat([pacotes_sorteados, base_etiquetado])
 	sorteadoEtiquetadoConsolidado = sorteadoEtiquetadoConsolidado.merge(baseDeRoteirizacao.copy()[['Shipment', 'Rota', 'Ciclo']], how='left', on='Shipment')
 	sorteadoEtiquetadoConsolidado = sorteadoEtiquetadoConsolidado[['Shipment','Mudança de Status', 'Hora', 'Rota','Ciclo']]
+	sorteadoEtiquetadoConsolidado = sorteadoEtiquetadoConsolidado.fillna('')
 	return sorteadoEtiquetadoConsolidado
 
 
