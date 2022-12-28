@@ -45,7 +45,7 @@ def atualizarBase(id_planilha,aba_range,dados_da_base):
 	update_values(id_planilha,aba_range, 'USER_ENTERED', dados_da_base)
 
 def apagarCSVs():
-	os.chdir(r'C:\\Users\\'+ user_name +'\\Downloads')
+	os.chdir(f'{diretorio_robo}\\Downloads')
 	try:
 		nomesDosArquivos = [nomesDosArquivos for nomesDosArquivos in os.listdir() if ('.csv' in nomesDosArquivos) and ('.part' not in nomesDosArquivos)]
 		if debug_mode:
@@ -60,7 +60,7 @@ def apagarCSVs():
 
 def baixar_planification():
 	driver.get('https://envios.mercadolivre.com.br/logistics/routing/planification/download')
-	nome_do_arquivo = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\' + 'planification_' + '_'.join([time.strftime("%d"),time.strftime("%m"),time.strftime("%Y")]) + '.csv'
+	nome_do_arquivo = f'{diretorio_robo}\\Downloads\\planification_' + '_'.join([time.strftime("%d"),time.strftime("%m"),time.strftime("%Y")]) + '.csv'
 	# print(nome_do_arquivo)
 	contador = 0
 	while True:
@@ -86,7 +86,7 @@ def baixar_planification():
 	while True:
 		time.sleep(1)
 		try:
-			os.chdir(f'C:\\Users\\{user_name}\\Downloads')
+			os.chdir(f'{diretorio_robo}\\Downloads')
 			planification = pd.read_csv([nomesDosArquivos for nomesDosArquivos in os.listdir() if ('planification' in nomesDosArquivos) and ('.part' not in nomesDosArquivos)][0], low_memory = False)
 			os.chdir(diretorio_robo)
 			planification['Shipment'] = pd.to_numeric(planification['Shipment'], errors='coerce')
@@ -204,7 +204,7 @@ def consolidarBaseSorteadoEtiquetado(planification,baseDeRoteirizacao):
 
 def baixarMonitoramentoTerrestre():
 	driver.get('https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes')
-	nome_do_arquivo = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\' + 'rotas.csv'
+	nome_do_arquivo = f'{diretorio_robo}\\Downloads\\rotas.csv'
 	# print(nome_do_arquivo)
 	contador = 0
 	# Baixa o arquivo
@@ -228,7 +228,7 @@ def baixarMonitoramentoTerrestre():
 	while True:
 		time.sleep(1)
 		try:
-			os.chdir(f'C:\\Users\\{user_name}\\Downloads')
+			os.chdir(f'{diretorio_robo}\\Downloads')
 			nome_do_arquivo = [nomesDosArquivos for nomesDosArquivos in os.listdir() if ('rutas' in nomesDosArquivos or 'rotas' in nomesDosArquivos) and ('.part' not in nomesDosArquivos)][0]
 			monitoramentoTerrestre = pd.read_csv(nome_do_arquivo)
 			os.remove(nome_do_arquivo)
@@ -281,11 +281,13 @@ def gerarBaseDeRoteirizacao():
 	return baseDeRoteirizacaoConsolidada
 
 def funcaoPrincipal():
-	baseDeRoteirizacao = gerarBaseDeRoteirizacao()
+	# baseDeRoteirizacao = gerarBaseDeRoteirizacao()
+	baseDeRoteirizacao = importarBaseDeRoteirizacaoSheets()
 	while True:
 		try:
 			print('Atualizando hora/hora...')
 			starttime = time.time()
+			print(os.getcwd())
 
 			for i in range(100):
 				apagarCSVs()
@@ -361,15 +363,40 @@ def importarEtiquetagemForms():
         if debug_mode:
             print(traceback.format_exc())
 
+def importarBaseDeRoteirizacaoSheets():
+    try:
+        baseDeRoteirizacaoCongeladaAM = get_values(carregarParametros()["ID_PLANILHA_BASEDEROTEIRIZACAO_COCKPIT"],'BASE ROTERIZAÇÃO AM!A1:P')
+        baseDeRoteirizacaoCongeladaPM = get_values(carregarParametros()["ID_PLANILHA_BASEDEROTEIRIZACAO_COCKPIT"],'BASE ROTERIZAÇÃO PM!A1:P')
+        baseDeRoteirizacaoCongeladaAM = pd.DataFrame(baseDeRoteirizacaoCongeladaAM[1:],columns=baseDeRoteirizacaoCongeladaAM[0])
+        baseDeRoteirizacaoCongeladaPM = pd.DataFrame(baseDeRoteirizacaoCongeladaPM[1:],columns=baseDeRoteirizacaoCongeladaPM[0])
+        baseDeRoteirizacaoCongeladaAM['Ciclo'] = 'AM'
+        baseDeRoteirizacaoCongeladaPM['Ciclo'] = 'PM'
+        baseDeRoteirizacaoCongeladaAM = baseDeRoteirizacaoCongeladaAM[['Shipment', 'Rota', 'Ciclo']]
+        baseDeRoteirizacaoCongeladaPM = baseDeRoteirizacaoCongeladaPM[['Shipment', 'Rota', 'Ciclo']]
+		
+        return pd.concat([baseDeRoteirizacaoCongeladaAM,baseDeRoteirizacaoCongeladaPM])
+    except:
+        if debug_mode:
+            print(traceback.format_exc())
+
+def verificarProgressoDownload():
+	driver.find_element(By.CLASS_NAME,'downloadProgress').get_attribute('value')
+
+def verificarPastaDownloads():
+	if os.path.isdir(os.getcwd()+'\\Downloads'):
+		return True
+	else:
+		os.mkdir(os.getcwd()+'\\Downloads')	
+
+verificarPastaDownloads()
 diretorio_robo = os.getcwd()
 user_name = os.getlogin()
-debug_mode = False
-
+debug_mode = True
 print('Abrindo driver Firefox')
-# profile_path = r'C:\Users\vdiassob\AppData\Roaming\Mozilla\Firefox\Profiles\eituekku.robo'
+profile_path = carregarParametros()["perfilFirefox"]
 options = Options()
-# options.add_argument("-profile")
-# options.add_argument(profile_path)
+options.add_argument("-profile")
+options.add_argument(profile_path)
 options.binary_location = carregarParametros()["caminhonavegador"]
 driver = webdriver.Firefox(options=options)
 driver.get('https://envios.mercadolivre.com.br/logistics/routing/planification/download')

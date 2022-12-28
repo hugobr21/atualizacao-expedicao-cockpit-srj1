@@ -15,7 +15,7 @@ def carregarParametros():
 	return parametros
 
 def apagarCSVs():
-	os.chdir(r'C:\\Users\\'+ user_name +'\\Downloads')
+	os.chdir(f'{diretorio_robo}\\Downloads')
 	try:
 		nomesDosArquivos = [nomesDosArquivos for nomesDosArquivos in os.listdir() if ('.csv' in nomesDosArquivos) and ('.part' not in nomesDosArquivos)]
 		if debug_mode:
@@ -31,7 +31,7 @@ def apagarCSVs():
 def baixarArquivoGestaoDePacotes(xpathcompleto, arquivoSolicitado):
 	apagarCSVs()
 	driver.get('https://envios.mercadolivre.com.br/logistics/management-packages')
-	nome_do_arquivo = 'C:\\Users\\' + os.getlogin() + '\\Downloads\\' + 'logistics_packages_' + '-'.join([time.strftime("%d"),time.strftime("%m"),time.strftime("%Y")]) + '.csv'
+	nome_do_arquivo = f'{diretorio_robo}\\Downloads\\logistics_packages_' + '-'.join([time.strftime("%d"),time.strftime("%m"),time.strftime("%Y")]) + '.csv'
 	if debug_mode:
 		print(nome_do_arquivo)
 	# Baixa o arquivo
@@ -111,7 +111,7 @@ def baixarArquivoGestaoDePacotes(xpathcompleto, arquivoSolicitado):
 	while True:
 		time.sleep(1)
 		try:
-			os.chdir(f'C:\\Users\\{user_name}\\Downloads')
+			os.chdir(f'{diretorio_robo}\\Downloads')
 			for i in range(20):
 				time.sleep(1)
 				try:
@@ -185,15 +185,23 @@ def funcaoPrincipal():
 				print(traceback.format_exc())
 			pass
 
+def verificarPastaDownloads():
+	if os.path.isdir(os.getcwd()+'\\Downloads'):
+		return True
+	else:
+		os.mkdir(os.getcwd()+'\\Downloads')
+
+
+verificarPastaDownloads()
 diretorio_robo = os.getcwd()
 user_name = os.getlogin()
 debug_mode = False
 
 print('Abrindo driver Firefox')
-# profile_path = r'C:\Users\vdiassob\AppData\Roaming\Mozilla\Firefox\Profiles\eituekku.robo'
+profile_path = carregarParametros()["perfilFirefox"]
 options = Options()
-# options.add_argument("-profile")
-# options.add_argument(profile_path)
+options.add_argument("-profile")
+options.add_argument(profile_path)
 options.binary_location = carregarParametros()["caminhonavegador"]
 driver = webdriver.Firefox(options=options)
 driver.get('https://envios.mercadolivre.com.br/logistics/routing/planification/download')

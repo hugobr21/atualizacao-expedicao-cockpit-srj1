@@ -5,12 +5,24 @@ import json
 def carregarParametros():
     with open("parametros.json", "r") as infile:
         parametros = json.load(infile)
+
+    caminhonavegadorentry.delete(0,'end')
+    destinoLHentry.delete(0,'end')
+    duracaoAtualizacaoHoraHoraentry.delete(0,'end')
+    delayAcompanhamentoExpedicaoentry.delete(0,'end')
+    ID_PLANILHA_BASE_COCKPITentry.delete(0,'end')
+    ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHHentry.delete(0,'end')
+    perfilFirefoxentry.delete(0,'end')
+    ID_PLANILHA_BASEDEROTEIRIZACAO_COCKPITentry.delete(0,'end')
+
     caminhonavegadorentry.insert(0,parametros["caminhonavegador"])
     destinoLHentry.insert(0,parametros["destinoLH"])
     duracaoAtualizacaoHoraHoraentry.insert(0,parametros["duracaoAtualizacaoHoraHora"])
     delayAcompanhamentoExpedicaoentry.insert(0,parametros["delayAcompanhamentoExpedicao"])
     ID_PLANILHA_BASE_COCKPITentry.insert(0,parametros["ID_PLANILHA_BASE_COCKPIT"])
     ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHHentry.insert(0,parametros["ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHH"])
+    perfilFirefoxentry.insert(0,parametros["perfilFirefox"])
+    ID_PLANILHA_BASEDEROTEIRIZACAO_COCKPITentry.insert(0,parametros["ID_PLANILHA_BASEDEROTEIRIZACAO_COCKPIT"])
     return parametros
 
 def gravarParametros():
@@ -30,7 +42,10 @@ def gravarParametros():
             duracaoAtualizacaoHoraHoraentry.get(),
             delayAcompanhamentoExpedicaoentry.get(),
             ID_PLANILHA_BASE_COCKPITentry.get(),
-            ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHHentry.get()
+            ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHHentry.get(),
+            perfilFirefoxentry.get(),
+            ID_PLANILHA_BASEDEROTEIRIZACAO_COCKPITentry.get(),
+            
             ]:
             messagebox.showinfo(title="Cuidado!", message="Há campos vazios!")
         else:
@@ -40,7 +55,10 @@ def gravarParametros():
                 "duracaoAtualizacaoHoraHora": duracaoAtualizacaoHoraHoraentry.get(),
                 "delayAcompanhamentoExpedicao": delayAcompanhamentoExpedicaoentry.get(),
                 "ID_PLANILHA_BASE_COCKPIT": ID_PLANILHA_BASE_COCKPITentry.get(),
-                "ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHH": ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHHentry.get()
+                "ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHH": ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHHentry.get(),
+                "perfilFirefox": perfilFirefoxentry.get(),
+                "ID_PLANILHA_BASEDEROTEIRIZACAO_COCKPIT": ID_PLANILHA_BASEDEROTEIRIZACAO_COCKPITentry.get()
+
             }
 
             with open("parametros.json", "w") as outfile:
@@ -94,23 +112,14 @@ ID_PLANILHA_BASE_COCKPIT = tk.Label(text="ID de planilha geral do Cockpit: ")
 ID_PLANILHA_BASE_COCKPIT.grid(column=0,row=4,sticky=tk.E)
 ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHH = tk.Label(text="ID de planilha de etiquetagem HH: ")
 ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHH.grid(column=0,row=5,sticky=tk.E)
+perfilFirefox = tk.Label(text="Perfil do Firefox: ")
+perfilFirefox.grid(column=0,row=6,sticky=tk.E)
+ID_PLANILHA_BASEDEROTEIRIZACAO_COCKPIT = tk.Label(text="ID de planilha de Base de Roteirizacao do Cockpit: ")
+ID_PLANILHA_BASEDEROTEIRIZACAO_COCKPIT.grid(column=0,row=7,sticky=tk.E)
 observacoes = tk.Label(text="*Onde: s=Segundos, m=Minutos")
 observacoes.grid(column=0,row=9,sticky=tk.E)
 
 # campos de entrada
-
-# caminhonavegadorentry = tk.Entry(window)
-# caminhonavegadorentry.grid(column=1,row=0,sticky=tk.E)
-# iddaplanilhaentry = tk.Entry()
-# iddaplanilhaentry.grid(column=1,row=1,sticky=tk.E)
-# linkdolookerentry = tk.Entry()
-# linkdolookerentry.grid(column=1,row=2,sticky=tk.E)
-# delayacompanhamentoentry = tk.Entry()
-# delayacompanhamentoentry.grid(column=1,row=3,sticky=tk.E)
-# delaycarregamentoentry = tk.Entry()
-# delaycarregamentoentry.grid(column=1,row=4,sticky=tk.E)
-# delaypreclickwebentry = tk.Entry()
-# delaypreclickwebentry.grid(column=1,row=5,sticky=tk.E)
 
 caminhonavegadorentry = tk.Entry(window)
 caminhonavegadorentry.grid(column=1,row=0,sticky=tk.E)
@@ -124,15 +133,16 @@ ID_PLANILHA_BASE_COCKPITentry = tk.Entry()
 ID_PLANILHA_BASE_COCKPITentry.grid(column=1,row=4,sticky=tk.E)
 ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHHentry = tk.Entry()
 ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHHentry.grid(column=1,row=5,sticky=tk.E)
-
+perfilFirefoxentry = tk.Entry()
+perfilFirefoxentry.grid(column=1,row=6,sticky=tk.E)
+ID_PLANILHA_BASEDEROTEIRIZACAO_COCKPITentry = tk.Entry()
+ID_PLANILHA_BASEDEROTEIRIZACAO_COCKPITentry.grid(column=1,row=7,sticky=tk.E)
 
 # botões de agendamento
 
 atualizarparametros = tk.Button(window,text='1 - Carregar parâmetros', command=carregarParametros)
-atualizarparametros.grid(column=0,row=6, columnspan=2,padx=5, pady=5,sticky=tk.E)
+atualizarparametros.grid(column=0,row=8, columnspan=2,padx=5, pady=5,sticky=tk.E)
 atualizarparametros = tk.Button(window,text='2 - Atualizar parâmetros', command=gravarParametros)
-atualizarparametros.grid(column=0,row=7, columnspan=2,padx=5, pady=5,sticky=tk.E)
-# agendamentodepausa = tk.Button(window,text='3 - Agendar Pausa/Retornar de Pausa',command=agendarPausa)
-# agendamentodepausa.grid(column=0,row=6, columnspan=2,padx=5, pady=5,sticky=tk.E)
+atualizarparametros.grid(column=0,row=9, columnspan=2,padx=5, pady=5,sticky=tk.E)
 
 window.mainloop()
