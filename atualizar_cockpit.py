@@ -287,7 +287,6 @@ def funcaoPrincipal():
 		try:
 			print('Atualizando hora/hora...')
 			starttime = time.time()
-			print(os.getcwd())
 
 			for i in range(100):
 				apagarCSVs()
@@ -391,7 +390,7 @@ def verificarPastaDownloads():
 verificarPastaDownloads()
 diretorio_robo = os.getcwd()
 user_name = os.getlogin()
-debug_mode = True
+debug_mode = False
 print('Abrindo driver Firefox')
 profile_path = carregarParametros()["perfilFirefox"]
 options = Options()
