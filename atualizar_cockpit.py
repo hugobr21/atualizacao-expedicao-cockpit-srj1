@@ -307,9 +307,6 @@ def funcaoPrincipal():
 			ID_PLANILHA_BASE_COCKPIT = carregarParametros()["ID_PLANILHA_BASE_COCKPIT"]
 			ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHH = carregarParametros()["ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHH"]
 			
-			# ID_PLANILHA_BASE_COCKPIT = '1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ'
-			# ID_PLANILHA_BASE_COCKPIT_ETIQUETAGEMHH = '1PG_xZsWDPJjjYHRDkxuycBiRIzLwohx7BRl1Ca006A0'
-
 			limpar_celulas(ID_PLANILHA_BASE_COCKPIT,'PLANIFICATION VIVO!A2:AE')
 			update_values(ID_PLANILHA_BASE_COCKPIT,'PLANIFICATION VIVO!A2','USER_ENTERED',planification.values.tolist())
 			
@@ -326,7 +323,28 @@ def funcaoPrincipal():
 			# update_values(ID_PLANILHA_BASE_COCKPIT,'INFORMAÇÕES OP!AD3','USER_ENTERED',etiquetagemFormsPM.values.tolist())
 			
 			update_values(ID_PLANILHA_BASE_COCKPIT,'PLANIFICATION VIVO!AF2','USER_ENTERED',[[time.strftime("%d/%m/%Y %H:%M:%S")]])
+			
+			time.sleep(5)
+			
+			driver.switch_to.window(driver.window_handles[1])
 
+			for i in range(5):
+				time.sleep(1)
+				try:
+					driver.find_elements(By.ID, 'more-options-header-menu-button')[0].click()
+					break
+				except:
+					pass
+			for i in range(5):
+				time.sleep(1)
+				try:
+					driver.find_elements(By.ID, 'header-refresh-button')[0].click()
+					break
+				except:
+					pass			
+			
+			driver.switch_to.window(driver.window_handles[0])
+			
 		except Exception as e:
 			if debug_mode:
 				print(e)
@@ -335,8 +353,8 @@ def funcaoPrincipal():
 
 def importarEtiquetagemForms():
     try:
-        inicioDoAM = get_values('1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ','INFORMAÇÕES OP!M3')[0][0]
-        inicioDoPM = get_values('1x3t-0JsNwN38FajdWNWlN9Z_cEbjz-BQqnchy-KjmWQ','INFORMAÇÕES OP!U3')[0][0]
+        inicioDoAM = get_values(carregarParametros()["ID_PLANILHA_BASE_COCKPIT"],'INFORMAÇÕES OP!M3')[0][0]
+        inicioDoPM = get_values(carregarParametros()["ID_PLANILHA_BASE_COCKPIT"],'INFORMAÇÕES OP!U3')[0][0]
         tabelaHHDeReferenciaAM = pd.DataFrame({'Range de horas':pd.Series(pd.date_range(inicioDoAM,periods=8, freq="h")).dt.strftime('%H:%M'),\
 			'Hora de Processamento':pd.Series(pd.date_range(inicioDoAM,periods=8, freq="h")).index})
         tabelaHHDeReferenciaPM = pd.DataFrame({'Range de horas':pd.Series(pd.date_range(inicioDoPM,periods=8, freq="h")).dt.strftime('%H:%M'),\
@@ -391,14 +409,19 @@ verificarPastaDownloads()
 diretorio_robo = os.getcwd()
 user_name = os.getlogin()
 debug_mode = False
-print('Abrindo driver Firefox')
 profile_path = carregarParametros()["perfilFirefox"]
 options = Options()
 options.add_argument("-profile")
 options.add_argument(profile_path)
 options.binary_location = carregarParametros()["caminhonavegador"]
+print('Abrindo driver Firefox')
 driver = webdriver.Firefox(options=options)
 driver.get('https://envios.mercadolivre.com.br/logistics/routing/planification/download')
+driver.execute_script("window.open('');")
+driver.switch_to.window(driver.window_handles[1])
+driver.get('https://datastudio.google.com/reporting/96427ae2-bf8a-4c8d-9260-35d32154d663/page/TuM7C')
+driver.switch_to.window(driver.window_handles[0])
+
 
 input('Após logar no logistics, pressione ENTER para continuar...\n')
 
