@@ -155,24 +155,24 @@ def funcaoPrincipal():
 					if debug_mode:
 						print(traceback.format_exc())
 					pass
-				driver.switch_to.window(driver.window_handles[1])
-				
-				for i in range(5):
-					time.sleep(1)
-					try:
-						driver.find_elements(By.ID, 'more-options-header-menu-button')[0].click()
-						break
-					except:
-						pass
-				for i in range(5):
-					time.sleep(1)
-					try:
-						driver.find_elements(By.ID, 'header-refresh-button')[0].click()
-						break
-					except:
-						pass	
-				
-				driver.switch_to.window(driver.window_handles[0])
+			driver.switch_to.window(driver.window_handles[1])
+			
+			for i in range(5):
+				time.sleep(1)
+				try:
+					driver.find_elements(By.ID, 'more-options-header-menu-button')[0].click()
+					break
+				except:
+					pass
+			for i in range(5):
+				time.sleep(1)
+				try:
+					driver.find_elements(By.ID, 'header-refresh-button')[0].click()
+					break
+				except:
+					pass	
+			
+			driver.switch_to.window(driver.window_handles[0])
 			
 			print(f'Última atualização: {agora}')
 			
