@@ -195,7 +195,7 @@ def verificarPastaDownloads():
 verificarPastaDownloads()
 diretorio_robo = os.getcwd()
 user_name = os.getlogin()
-debug_mode = True
+debug_mode = False
 
 print('Abrindo driver Firefox')
 profile_path = carregarParametros()["perfilFirefox"]
