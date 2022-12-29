@@ -27,60 +27,42 @@ def apagarCSVs():
 		pass
 	except Exception as e:
 		time.sleep(1)
+		print(traceback.format_exc())
 
 def baixarArquivoGestaoDePacotes(xpathcompleto, arquivoSolicitado):
 	apagarCSVs()
 	driver.get('https://envios.mercadolivre.com.br/logistics/management-packages')
-	nome_do_arquivo = f'{diretorio_robo}\\Downloads\\logistics_packages_' + '-'.join([time.strftime("%d"),time.strftime("%m"),time.strftime("%Y")]) + '.csv'
-	if debug_mode:
-		print(nome_do_arquivo)
 	# Baixa o arquivo
 	while True:
 		time.sleep(5)
 		try:
-			time.sleep(1)
-			driver.find_element(By.XPATH,'/html/body/main/div/div[2]/div/div/div[1]/button/span').click()
+			for i in range(10):
+				time.sleep(1)
+				driver.find_element(By.CLASS_NAME,'summarize-button').click()
+				break
 			
 			# Loop para clicar no botão do arquivo
+			
+			if debug_mode:
+				print('Loop para clicar no botão do arquivo')
+			
 			for i in range(20):
 				time.sleep(1)
 				try:
-					for i in driver.find_elements(By.CLASS_NAME, "status-card__title"):
-						if i.text.strip() == arquivoSolicitado:
-							botaodoarquivo = i
-					emTransito = [emTransito.text for emTransito in driver.find_elements(By.CLASS_NAME, "summarize-column")[2].find_elements(By.CLASS_NAME,'status-card')]
-					emTransito = [emTransito_.split('\n')[0] for emTransito_ in emTransito]
-					
-					naEstacao = [naEstacao.text for naEstacao in driver.find_elements(By.CLASS_NAME, "summarize-column")[1].find_elements(By.CLASS_NAME,'status-card')]
-					naEstacao = [naEstacao_.split('\n')[0] for naEstacao_ in naEstacao]
-					
-					naEstacao2 = [naEstacao2.text for naEstacao2 in driver.find_elements(By.CLASS_NAME, "summarize-column")[1].find_elements(By.CLASS_NAME,'status-card--stale status-card')]
-					naEstacao2 = [naEstacao2.split('\n')[0] for naEstacao2 in naEstacao2]
-					
-	# 				if (arquivoSolicitado not in emTransito) and (arquivoSolicitado not in naEstacao) and (arquivoSolicitado not in naEstacao2):
-
-	# 					columns = ['ID do envio', 'Status do envio', 'Subtatus do envio',
-    #    'Valor declarado', 'Destination Facility Type',
-    #    'Destination Facility ID', 'Rota', 'Promessa de entrega', 'Altura',
-    #    'Largura', 'Comprimento', 'Peso', 'Volume', 'Nome e sobrenome',
-    #    'Telefone', 'Tipo de Endereço', 'Endereço', 'Rua', 'Número',
-    #    'Referências', 'Cidade', 'State', 'bairro', 'Codigo Postal', 'Origem']
-
-	# 					return pd.DataFrame(columns=columns)
-
-					# botaodoarquivo = driver.find_element(By.XPATH,xpathcompleto)
-					textodobotaodoarquivo = botaodoarquivo.text.split('\n')[0]
-					time.sleep(3)
-					botaodoarquivo.click()
-					if debug_mode:
-						print('Loop para clicar no botão do arquivo')
-					break
+					botoes_gestaodepacotes = [i for i in driver.find_elements(By.CLASS_NAME, 'status-card__title') if i.text == arquivoSolicitado]
+					if len(botoes_gestaodepacotes) < 1:
+						raise NotImplementedError
+					else:
+						botoes_gestaodepacotes[0].click()
+						textodobotaodoarquivo = botoes_gestaodepacotes[0].text
+						break
 				except Exception as e:
 					if debug_mode:
 						print(traceback.format_exc())
+					textodobotaodoarquivo = 'Indisponível'
 					pass
 
-			if (arquivoSolicitado not in emTransito) and (arquivoSolicitado not in naEstacao) and (arquivoSolicitado not in naEstacao2):
+			if textodobotaodoarquivo == 'Indisponível':
 
 				columns = ['ID do envio', 'Status do envio', 'Subtatus do envio',
 'Valor declarado', 'Destination Facility Type',
@@ -88,15 +70,14 @@ def baixarArquivoGestaoDePacotes(xpathcompleto, arquivoSolicitado):
 'Largura', 'Comprimento', 'Peso', 'Volume', 'Nome e sobrenome',
 'Telefone', 'Tipo de Endereço', 'Endereço', 'Rua', 'Número',
 'Referências', 'Cidade', 'State', 'bairro', 'Codigo Postal', 'Origem']
-
+			
 				return pd.DataFrame(columns=columns)
 
 			# Loop para clicar no botão de baixar o arquivo
 			for i in range(20):
 				time.sleep(1)
 				try:
-					botaobaixar = driver.find_element(By.XPATH,'/html/body/main/div/div[2]/div/div/div[2]/div[2]/button')
-					time.sleep(3)
+					botaobaixar = driver.find_element(By.CLASS_NAME,'downloader')
 					botaobaixar.click()
 					break
 				except Exception as e:
@@ -124,7 +105,8 @@ def baixarArquivoGestaoDePacotes(xpathcompleto, arquivoSolicitado):
 						raise IndexError
 					pass
 			arquivoGestaoDePacotes = pd.read_csv(nomeArquivoGestaoDePacotes)
-			os.remove(nomeArquivoGestaoDePacotes)
+			apagarCSVs()
+			# os.remove(nomeArquivoGestaoDePacotes)
 			os.chdir(diretorio_robo)
 			arquivoGestaoDePacotes['ID do envio'] = pd.to_numeric(arquivoGestaoDePacotes['ID do envio'], errors='coerce')
 			arquivoGestaoDePacotes = arquivoGestaoDePacotes.loc[~ (arquivoGestaoDePacotes['ID do envio'].isna())]
@@ -173,7 +155,25 @@ def funcaoPrincipal():
 					if debug_mode:
 						print(traceback.format_exc())
 					pass
-
+				driver.switch_to.window(driver.window_handles[1])
+				
+				for i in range(5):
+					time.sleep(1)
+					try:
+						driver.find_elements(By.ID, 'more-options-header-menu-button')[0].click()
+						break
+					except:
+						pass
+				for i in range(5):
+					time.sleep(1)
+					try:
+						driver.find_elements(By.ID, 'header-refresh-button')[0].click()
+						break
+					except:
+						pass	
+				
+				driver.switch_to.window(driver.window_handles[0])
+			
 			print(f'Última atualização: {agora}')
 			
 			print('Pausa para acompanhamento...')
@@ -195,7 +195,7 @@ def verificarPastaDownloads():
 verificarPastaDownloads()
 diretorio_robo = os.getcwd()
 user_name = os.getlogin()
-debug_mode = False
+debug_mode = True
 
 print('Abrindo driver Firefox')
 profile_path = carregarParametros()["perfilFirefox"]
@@ -205,6 +205,10 @@ options.add_argument(profile_path)
 options.binary_location = carregarParametros()["caminhonavegador"]
 driver = webdriver.Firefox(options=options)
 driver.get('https://envios.mercadolivre.com.br/logistics/routing/planification/download')
+driver.execute_script("window.open('');")
+driver.switch_to.window(driver.window_handles[1])
+driver.get('https://datastudio.google.com/reporting/96427ae2-bf8a-4c8d-9260-35d32154d663/page/TuM7C')
+driver.switch_to.window(driver.window_handles[0])
 
 input('Após logar no logistics, pressione ENTER para continuar...\n')
 
