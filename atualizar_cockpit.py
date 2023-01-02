@@ -164,7 +164,7 @@ def consolidarBaseSorteadoEtiquetado(planification,baseDeRoteirizacao):
         print('Armazenando pacotes etiquetados')
     
     # Armazenando pacotes etiquetados
-    base_etiquetado = carregarBaseSorteadoEtiquetado('mudanca_de_status_etiquetagem')
+    base_etiquetado = carregarBaseSorteadoEtiquetado(f'{diretorio_base_sorteado_etiquetado}\\mudanca_de_status_etiquetagem')
 
     planification_atstation = baseDeRoteirizacaoConsolidada_tratada.copy().merge(base_etiquetado, how='left', on='Shipment')
     planification_atstation = planification_atstation.loc[(planification_atstation['Status'] == 'Etiquetado') & (planification_atstation['Mudança de Status'].isna() == True)]
@@ -173,13 +173,13 @@ def consolidarBaseSorteadoEtiquetado(planification,baseDeRoteirizacao):
     planification_atstation = planification_atstation[['Shipment','Mudança de Status', 'Hora']]
     base_etiquetado = pd.concat([base_etiquetado, planification_atstation])
     data_arquivo = data_agora.strftime("_%d_%m_%Y")
-    base_etiquetado.to_excel(f'mudanca_de_status_etiquetagem{data_arquivo}.xlsx', index=False)
+    base_etiquetado.to_excel(f'{diretorio_base_sorteado_etiquetado}\\mudanca_de_status_etiquetagem{data_arquivo}.xlsx', index=False)
 
     if debug_mode:
         print('Armazenando pacotes sorteado')
     
     # Armazenando pacotes sorteado
-    pacotes_sorteados = carregarBaseSorteadoEtiquetado('mudanca_de_status_sorteado')
+    pacotes_sorteados = carregarBaseSorteadoEtiquetado(f'{diretorio_base_sorteado_etiquetado}\\mudanca_de_status_sorteado')
     planification_sorteado = baseDeRoteirizacaoConsolidada_tratada.copy().merge(pacotes_sorteados, how='left', on='Shipment')
     # print(planification_sorteado)
 
@@ -189,7 +189,7 @@ def consolidarBaseSorteadoEtiquetado(planification,baseDeRoteirizacao):
     planification_sorteado = planification_sorteado[['Shipment','Mudança de Status', 'Hora']]
     pacotes_sorteados = pd.concat([pacotes_sorteados, planification_sorteado])
     data_arquivo = data_agora.strftime("_%d_%m_%Y")
-    pacotes_sorteados.to_excel(f'mudanca_de_status_sorteado{data_arquivo}.xlsx', index=False)
+    pacotes_sorteados.to_excel(f'{diretorio_base_sorteado_etiquetado}\\mudanca_de_status_sorteado{data_arquivo}.xlsx', index=False)
 
     sorteadoEtiquetadoConsolidado = pd.concat([pacotes_sorteados, base_etiquetado])
     sorteadoEtiquetadoConsolidado = sorteadoEtiquetadoConsolidado.merge(baseDeRoteirizacao.copy()[['Shipment', 'Rota', 'Ciclo']], how='left', on='Shipment')
@@ -200,32 +200,29 @@ def consolidarBaseSorteadoEtiquetado(planification,baseDeRoteirizacao):
 def baixarMonitoramentoTerrestre():
     driver.get('https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes')
     nome_do_arquivo = f'{diretorio_robo}\\Downloads\\rotas.csv'
-    # print(nome_do_arquivo)
-    contador = 0
     # Baixa o arquivo
     while True:
         time.sleep(5)
         try:
-            time.sleep(1)
-            driver.find_element(By.XPATH,'//*[@id="button-download-csv"]').click()
+            for i in range(20):
+                time.sleep(1)
+                driver.find_element(By.ID,'button-download-csv').click()
+                break
             break    
         except:
-            if contador >= 10:
-                print('#1 Reiniciando página e download - baixarmonitoramentoTerrestre')
-                driver.get("https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes")
-                time.sleep(6)
-            print('erro ao baixar arquivo')
-            print(traceback.format_exc())
+            if debug_mode:
+                print(traceback.format_exc())
             logging.debug(str(traceback.format_exc()))
-            contador = contador + 1
-            pass
-    contador = 0
     # Carrega e trata o arquivo
     while True:
-        time.sleep(1)
+        os.chdir(f'{diretorio_robo}\\Downloads')
         try:
-            os.chdir(f'{diretorio_robo}\\Downloads')
-            nome_do_arquivo = [nomesDosArquivos for nomesDosArquivos in os.listdir() if ('rutas' in nomesDosArquivos or 'rotas' in nomesDosArquivos) and ('.part' not in nomesDosArquivos)][0]
+            for i in range(200):
+                time.sleep(1)
+                nome_do_arquivo = [nomesDosArquivos for nomesDosArquivos in os.listdir() if ('rutas' in nomesDosArquivos or 'rotas' in nomesDosArquivos) and ('.part' not in nomesDosArquivos)]
+                if len(nome_do_arquivo) < 1: continue
+                else:nome_do_arquivo = nome_do_arquivo[0]
+                break
             monitoramentoTerrestre = pd.read_csv(nome_do_arquivo)
             os.remove(nome_do_arquivo)
             os.chdir(diretorio_robo)
@@ -243,21 +240,11 @@ def baixarMonitoramentoTerrestre():
             return monitoramentoTerrestre
         except Exception as e:
             if debug_mode:
-                print(e)
                 print(traceback.format_exc())
             logging.debug(str(traceback.format_exc()))
-            contador = contador + 1
-            if contador >= 100:
-                try:
-                    apagarCSVs()
-                except:
-                    pass
-                logging.debug(str(traceback.format_exc()))
-                print('#2 Reiniciando página e download - baixarmonitoramentoTerrestre')
-                driver.get("https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes")
-                time.sleep(6)
-                # raise KeyError
-            # print('erro ao carregar arquivo')
+            if i > 100 and i < 150:
+                driver.get('https://envios.mercadolivre.com.br/logistics/line-haul/monitoring/routes')
+            elif i >= 150: raise NotImplementedError
             pass
 
 def gerarBaseDeRoteirizacao():
@@ -324,22 +311,22 @@ def funcaoPrincipal():
             
             driver.switch_to.window(driver.window_handles[1])
 
-            for i in range(5):
-                time.sleep(1)
-                try:
-                    driver.find_elements(By.ID, 'more-options-header-menu-button')[0].click()
-                    break
-                except:
-                    logging.debug(str(traceback.format_exc()))
-                    pass
-            for i in range(5):
-                time.sleep(1)
-                try:
-                    driver.find_elements(By.ID, 'header-refresh-button')[0].click()
-                    break
-                except:
-                    logging.debug(str(traceback.format_exc()))
-                    pass            
+            # for i in range(5):
+            #     time.sleep(1)
+            #     try:
+            #         driver.find_elements(By.ID, 'more-options-header-menu-button')[0].click()
+            #         break
+            #     except:
+            #         logging.debug(str(traceback.format_exc()))
+            #         pass
+            # for i in range(5):
+            #     time.sleep(1)
+            #     try:
+            #         driver.find_elements(By.ID, 'header-refresh-button')[0].click()
+            #         break
+            #     except:
+            #         logging.debug(str(traceback.format_exc()))
+            #         pass            
             
             driver.switch_to.window(driver.window_handles[0])
             
@@ -410,24 +397,29 @@ def importarBaseDeRoteirizacaoSheets():
 def verificarProgressoDownload():
     driver.find_element(By.CLASS_NAME,'downloadProgress').get_attribute('value')
 
-def verificarPastaDownloads():
+def verificarPastas():
+    # Verifica se a pasta Downloads existe
     if os.path.isdir(os.getcwd()+'\\Downloads'):
         return True
     else:
         os.mkdir(os.getcwd()+'\\Downloads')    
-
-def verificarPastaLogs():
+    # Verifica se a pasta Logs existe
     if os.path.isdir(os.getcwd()+'\\Logs'):
         return True
     else:
         os.mkdir(os.getcwd()+'\\Logs')    
+    # Verifica se a pasta Mudança de Status Existe
+    if os.path.isdir(os.getcwd()+'\\Mudança de Status'):
+        return True
+    else:
+        os.mkdir(os.getcwd()+'\\Mudança de Status')    
 
-verificarPastaDownloads()
-verificarPastaLogs()
+verificarPastas()
 log_filename_start = os.getcwd() + '\\Logs\\atualizar_cockpit ' + time.strftime('%d_%m_%Y %H_%M_%S') + '.log'
 logging.basicConfig(filename=log_filename_start, level=logging.DEBUG, format='%(asctime)s, %(message)s',datefmt='%m/%d/%Y %H:%M:%S')
 diretorio_robo = os.getcwd()
 user_name = os.getlogin()
+diretorio_base_sorteado_etiquetado = f'{diretorio_robo}\\Mudança de Status'
 debug_mode = False
 profile_path = carregarParametros()["perfilFirefox"]
 options = Options()
